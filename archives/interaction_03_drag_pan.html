@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idea 3: Drag to Pan</title>
+    <style>
+        :root { --bg: #f4f4f0; --fg: #111; --ac: #ff3300; }
+        body { background: var(--bg); color: var(--fg); font-family: monospace; font-size: 16px; margin: 0; display: flex; height: 100vh; overflow: hidden; user-select: none; }
+        .sidebar { width: 350px; flex-shrink: 0; background: var(--bg); color: var(--fg); display: flex; flex-direction: column; justify-content: center; padding: 3rem; border-right: 6px solid var(--fg); z-index: 10;}
+        h1 { font-family: 'Arial Black', sans-serif; font-size: 5rem; line-height: 0.9; margin: 0 0 1rem 0; text-transform: uppercase; letter-spacing: -2px; color: var(--ac);}
+        .roles { font-size: 1.5rem; font-weight: bold; border-left: 5px solid var(--fg); padding-left: 10px;}
+        
+        .slider { flex: 1; display: flex; gap: 3rem; padding: 4rem; overflow-x: auto; cursor: grab; }
+        .slider:active { cursor: grabbing; }
+        .slider::-webkit-scrollbar { display: none; }
+        
+        h2 { border-bottom: 4px solid var(--ac); padding-bottom: 5px; margin-top: 0; text-transform: uppercase; display: inline-block; font-size: 1.5rem;}
+        .col { width: 450px; flex-shrink: 0; display: flex; flex-direction: column; pointer-events: none; }
+        .card { border: 4px solid var(--fg); background: #fff; padding: 2rem; display: flex; flex-direction: column; flex: 1; box-shadow: 8px 8px 0 var(--fg);}
+        .combo-col { gap: 2rem; }
+        .combo-col > .card { flex: 1; justify-content: space-between;}
+        
+        .hl { color: var(--ac); font-weight: bold; background: var(--bg); padding: 2px 5px;}
+        p { font-size: 1.1rem; line-height: 1.5; margin-bottom: 1.5rem;}
+        .project-title { font-family: 'Arial Black', sans-serif; font-size: 3rem; line-height: 1; margin: 0 0 1rem 0; text-transform: uppercase; color: var(--fg);}
+        
+        .btn { display: block; background: var(--fg); font-family: 'Arial Black', sans-serif; font-size: 1.8rem; text-align: center; text-decoration: none; color: var(--bg); padding: 1.5rem; border: 4px solid var(--fg); pointer-events: auto; }
+        .drag-indicator { position: absolute; bottom: 2rem; right: 2rem; background: var(--ac); color: #fff; padding: 10px 20px; font-weight: bold; font-family: 'Arial Black', sans-serif; pointer-events: none; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>YOUR<br>NAME</h1>
+        <div class="roles">ENGINEER<br>PRODUCT OWNER</div>
+    </div>
+    <div class="slider" id="slider">
+        <div class="col combo-col">
+            <div class="card">
+                <h2>Process & Vision</h2>
+                <div style="margin-top: 1rem;">
+                    <p><span class="hl">RPA Solutions</span>Driving business process improvement via workflow automation.</p>
+                </div>
+            </div>
+            <div class="card" style="border-style: dashed;">
+                <h2>Connectivity</h2>
+                <a href="#" class="btn" style="pointer-events: auto; margin-top: auto;">HIRE ME</a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <h2 style="color: var(--ac); border-color: var(--ac);">Active Artifact</h2>
+                <div class="project-title">Board Game Hub</div>
+                <p>Live multiplayer platform powered by SignalR. Deployed to Azure via Docker multi-stage builds. Strictly gated by SonarQube.</p>
+                <a href="#" class="btn" style="pointer-events: auto; margin-top: auto;">AUDIT SOURCE</a>
+            </div>
+        </div>
+    </div>
+    <div class="drag-indicator"><-> CLICK & DRAG TO PAN</div>
+
+    <script>
+        const slider = document.getElementById('slider');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => { isDown = false; });
+        slider.addEventListener('mouseup', () => { isDown = false; });
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; // Scroll speed multiplier
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+</body>
+</html>

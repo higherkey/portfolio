@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildcard 3: Dark Overlap Watermarks</title>
+    <style>
+        :root { --bg: #0a0a0a; --fg: #e5e5e5; --ac: #ff0055; --text: #888;}
+        body { background: var(--bg); color: var(--fg); font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 5vw; overflow-x: hidden; position: relative; z-index: 1;}
+        ::selection { background: var(--ac); color: #fff; }
+        
+        .watermark { position: fixed; font-size: 25vw; font-weight: 900; color: #111; z-index: -1; top: 50%; left: 50%; transform: translate(-50%, -50%); line-height: 0.8; white-space: nowrap; font-family: 'Arial Black', sans-serif;}
+        
+        header { border-bottom: 2px solid #333; padding-bottom: 2rem; margin-bottom: 4rem; display: flex; justify-content: space-between; align-items: flex-end;}
+        h1 { font-family: 'Arial Black', sans-serif; font-size: 5rem; margin: 0; line-height: 1; letter-spacing: -2px; color: #fff;}
+        .roles { font-size: 1.5rem; text-align: right; font-family: monospace; font-weight: bold; color: var(--ac);}
+        
+        .container { display: flex; gap: 4rem; }
+        .sidebar { flex: 1; }
+        .main { flex: 2; padding-left: 2rem; border-left: 2px solid #333;}
+
+        h2 { font-size: 1.5rem; color: #fff; text-transform: uppercase; margin-top: 0; font-family: monospace; letter-spacing: 2px;}
+        .hl { display: block; color: var(--fg); font-weight: bold; font-size: 1.2rem; margin-bottom: 5px; font-family: monospace;}
+        p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem; color: var(--text);}
+        
+        .project { border-left: 4px solid var(--ac); padding-left: 2rem; margin-bottom: 4rem; position: relative;}
+        .project-title { font-family: 'Arial Black', sans-serif; font-size: 4rem; font-weight: bold; line-height: 1; margin: 0 0 1rem 0; text-transform: uppercase; color: #fff;}
+        
+        .links { margin-top: 3rem; display: flex; flex-direction: column; gap: 10px;}
+        .links a { display: block; font-size: 1.2rem; font-family: monospace; color: var(--text); text-decoration: none; padding: 10px 0; border-bottom: 1px solid #333; transition: 0.2s;}
+        .links a:hover { color: var(--ac); padding-left: 10px; border-color: var(--ac); }
+        
+        .btn { display: block; font-family: 'Arial Black', sans-serif; font-size: 3rem; text-align: left; text-decoration: none; color: #fff; margin-top: 6rem; transition: 0.2s; position: relative;}
+        .btn::after { content: '→'; position: absolute; right: 0; color: var(--ac); transition: 0.2s;}
+        .btn:hover { color: var(--ac); }
+        .btn:hover::after { right: -20px; }
+    </style>
+</head>
+<body>
+    <div class="watermark">ARCHITECT</div>
+
+    <header>
+        <h1>YOUR<br>NAME</h1>
+        <div class="roles">ENGINEER // PRODUCT OWNER</div>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2 style="margin-bottom: 2rem;">Overview</h2>
+            
+            <p><span class="hl">RPA & AUTOMATION</span>Streamlining operations via intelligent process engineering.</p>
+            <p><span class="hl">STAKEHOLDER MGMT</span>Defining product vision and managing client expectations.</p>
+            <p><span class="hl">SYSTEM ARCHITECTURE</span>Executing multi-stage Docker deployments into Azure environments.</p>
+            
+            <div class="links" style="margin-top: 4rem;">
+                <h2 style="margin-bottom: 1rem;">Network</h2>
+                <a href="#">EMAIL_ADDRESS</a>
+                <a href="#">GITHUB_PROFILE</a>
+                <a href="#">LINKEDIN_PAGE</a>
+            </div>
+        </div>
+        <div class="main">
+            <h2 style="margin-bottom: 2rem;">Deployments</h2>
+            
+            <div class="project">
+                <div class="project-title">BOARD GAME HUB</div>
+                <p>Live multiplayer platform powered by SignalR. Deployed to Azure via Docker multi-stage builds. Strictly gated by SonarQube.</p>
+                <a href="#" style="color:var(--ac); font-family:monospace; font-weight:bold; font-size: 1.2rem; text-decoration:none; margin-top: 1rem; display:inline-block;">AUDIT SOURCE _</a>
+            </div>
+
+            <div class="project" style="border-color: #333; opacity: 0.6;">
+                <div class="project-title">FUTURE CAPACITY</div>
+                <p>Environment ready for the forthcoming enterprise automation and workflow integration project.</p>
+            </div>
+        </div>
+    </div>
+    
+    <a href="#" class="btn">INQUIRE FOR COLLABORATION</a>
+</body>
+</html>

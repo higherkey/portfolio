@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bold Mix 3: Vivid Orange Raw Data</title>
+    <style>
+        :root { --bg: #ff5500; --fg: #111111; --white: #fff; }
+        body { background: var(--bg); color: var(--fg); font-family: 'Courier New', Courier, monospace; font-size: 16px; margin: 0; padding: 4rem; overflow-x: hidden; }
+        header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 5px solid var(--fg); padding-bottom: 2rem; margin-bottom: 4rem;}
+        h1 { font-family: 'Arial Black', sans-serif; font-size: 6rem; margin: 0; line-height: 0.8; letter-spacing: -4px;}
+        .roles { font-size: 1.5rem; font-weight: bold; text-align: right;}
+        
+        .container { display: flex; gap: 4rem; }
+        .sidebar { flex: 1; border-right: 5px solid var(--fg); padding-right: 2rem; }
+        .main { flex: 2; }
+
+        h2 { background: var(--fg); color: var(--bg); display: inline-block; padding: 5px 15px; font-size: 2rem; margin-top: 0; text-transform: uppercase;}
+        p { font-size: 1.2rem; line-height: 1.5; font-weight: bold; background: var(--white); padding: 10px; border: 2px solid var(--fg);}
+        
+        .project { border: 5px solid var(--white); padding: 2rem; margin-bottom: 2rem; position: relative;}
+        .project-title { font-family: 'Arial Black', sans-serif; font-size: 4rem; color: var(--white); line-height: 0.9; margin: 0 0 1rem 0; letter-spacing: -1px;}
+        .project p { background: transparent; border: none; padding: 0; color: var(--fg);}
+        
+        .links a { display: block; font-size: 1.5rem; font-weight: bold; color: var(--white); text-decoration: none; border-bottom: 2px solid var(--white); padding: 10px 0; transition: 0.2s;}
+        .links a:hover { background: var(--fg); color: var(--bg); border-color: var(--fg); padding-left: 10px;}
+        
+        .btn { display: block; font-family: 'Arial Black', sans-serif; font-size: 2.5rem; text-align: center; text-decoration: none; color: var(--fg); background: var(--white); border: 8px solid var(--fg); padding: 2rem; box-shadow: 10px 10px 0 var(--fg); margin-top: 4rem;}
+        .btn:hover { background: var(--fg); color: var(--white); box-shadow: 0 0 0 var(--fg); transform: translate(10px, 10px);}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>YOUR<br>NAME</h1>
+        <div class="roles">SOFTWARE ENGINEER<br>& PRODUCT OWNER</div>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2 style="background:var(--white); color:var(--fg);">Capabilities</h2>
+            <p><strong>[ Architecting ]</strong><br>System design, Docker APIs, Azure.</p>
+            <p><strong>[ Stakeholders ]</strong><br>Managing expectations, driving vision.</p>
+            <p><strong>[ Client Relations ]</strong><br>Consulting, freelance negotiation.</p>
+            
+            <div class="links" style="margin-top: 3rem;">
+                <h2 style="background:var(--white); color:var(--fg); margin-bottom: 1rem;">Contact</h2>
+                <a href="#">EMAIL_ADDRESS</a>
+                <a href="#">GITHUB_PROFILE</a>
+                <a href="#">LINKEDIN_PAGE</a>
+            </div>
+        </div>
+        <div class="main">
+            <h2>Artifacts</h2>
+            
+            <div class="project">
+                <div class="project-title">BOARD GAME HUB</div>
+                <p>Architected real-time multiplayer platform utilizing SignalR over websockets. Automated multi-stage Docker deployments to Azure. Gated by SonarQube.</p>
+                <a href="#" style="background:var(--fg); color:var(--white); font-weight:bold; padding: 5px 10px; display:inline-block; margin-top:20px; text-decoration:none;">AUDIT REPO</a>
+            </div>
+
+            <div class="project" style="border-style: dashed; opacity: 0.8;">
+                <div class="project-title" style="color:var(--fg);">FUTURE_APP</div>
+                <p>Space allocated for upcoming complex software architecture projects.</p>
+            </div>
+        </div>
+    </div>
+    
+    <a href="#" class="btn">INQUIRE FOR COLLABORATION & HIRING</a>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restricted 4: Deep Slate & Pink Line (Three Columns)</title>
+    <style>
+        :root { --bg: #0f172a; --fg: #e2e8f0; --accent: #f472b6; }
+        body { background: var(--bg); color: var(--fg); font-family: monospace; font-size: 16px; margin: 0; padding: 4vw; }
+        ::selection { background: var(--accent); color: var(--bg); }
+        
+        .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3rem; max-width: 1600px; margin: 0 auto;}
+        
+        .header-col { border-top: 10px solid var(--accent); padding-top: 2rem; display: flex; flex-direction: column;}
+        h1 { font-family: 'Arial Black', sans-serif; font-size: 4rem; margin: 0; line-height: 1; text-transform: uppercase; color: #fff;}
+        .roles { font-size: 1.2rem; font-weight: bold; color: var(--accent); margin-bottom: 2rem;}
+        
+        .cta-links { margin-top: auto; display: flex; flex-direction: column; gap: 10px; padding-top: 2rem; border-top: 1px dashed var(--fg);}
+        .cta-links h3 { color: #94a3b8; font-size: 1rem; text-transform: uppercase; margin: 0;}
+        .cta-links a { color: var(--fg); text-decoration: none; padding: 10px 0; border-bottom: 1px solid #334155; transition: 0.2s; font-weight: bold;}
+        .cta-links a:hover { color: var(--accent); padding-left: 10px;}
+        
+        h2 { font-size: 1.2rem; margin-top: 0; text-transform: uppercase; letter-spacing: 2px; color: #94a3b8; margin-bottom: 2rem;}
+        .hl { display: block; color: #fff; font-size: 1.5rem; margin-bottom: 5px; font-weight: bold;}
+        p { font-size: 1.1rem; line-height: 1.5; margin-bottom: 2.5rem; color: #cbd5e1;}
+        
+        .project-col { border-left: 1px solid #334155; padding-left: 3rem; }
+        
+        .project { border: 2px solid var(--fg); padding: 1.5rem; margin-bottom: 2rem; position: relative;}
+        .project-title { font-family: 'Arial Black', sans-serif; font-size: 2rem; color: #fff; margin: 0 0 1rem 0; letter-spacing: -1px; text-transform: uppercase;}
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="header-col">
+            <h1>YOUR<br>NAME</h1>
+            <div class="roles">ENGINEER / PRODUCT</div>
+            
+            <div class="cta-links">
+                <h3>Open To Connect</h3>
+                <a href="#">EMAIL COLLABORATION -></a>
+                <a href="#">GITHUB SOURCE -></a>
+                <a href="#">LINKEDIN NETWORK -></a>
+            </div>
+        </div>
+
+        <div class="focus-col">
+            <h2>Dynamics</h2>
+            <p><span class="hl">RPA Solutions</span>Engineering efficient automation for business process improvement.</p>
+            <p><span class="hl">Product Vision</span>Managing stakeholder alignment and clear client communications.</p>
+            <p><span class="hl">Infrastructure</span>Containerized applications, Azure deployments, and system architecture.</p>
+        </div>
+        
+        <div class="project-col">
+            <h2>Executed Work</h2>
+            
+            <div class="project">
+                <div class="project-title">Board Game Hub</div>
+                <p>Live multiplayer platform powered by SignalR. Deployed to Azure via Docker multi-stage builds. Strictly gated by SonarQube.</p>
+                <a href="#" style="background:var(--accent); color:var(--bg); font-weight:bold; padding: 5px 10px; display:inline-block; text-decoration:none;">AUDIT REPO</a>
+            </div>
+
+            <div class="project" style="border-style: dashed; border-color: #64748b;">
+                <div class="project-title" style="color: #64748b;">Future Release</div>
+                <p style="color: #64748b;">Designated area for forthcoming enterprise applications.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

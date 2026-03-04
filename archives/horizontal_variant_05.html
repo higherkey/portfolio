@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal 5: Glitch Construct</title>
+    <style>
+        :root { --bg: #050505; --fg: #e2e8f0; --cyan: #0ff; --mag: #f0f; }
+        body { background: var(--bg); color: var(--fg); font-family: monospace; font-size: 16px; margin: 0; display: flex; height: 100vh; overflow: hidden; background-image: radial-gradient(circle at center, #111 0%, #000 100%);}
+        ::selection { background: var(--mag); color: #fff; }
+        
+        .sidebar { width: 450px; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; padding: 4rem; z-index: 10; position: relative;}
+        .sidebar::after { content: ''; position: absolute; right: 0; top: 10%; height: 80%; width: 2px; background: linear-gradient(to bottom, transparent, var(--cyan), transparent);}
+        
+        .glitch-text { position: relative; font-family: 'Arial Black', sans-serif; font-size: 5rem; margin: 0 0 1rem 0; line-height: 0.9; text-transform: uppercase; color: #fff;}
+        .glitch-text::before, .glitch-text::after { content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.8;}
+        .glitch-text::before { left: 3px; text-shadow: -2px 0 var(--cyan); }
+        .glitch-text::after { left: -3px; text-shadow: 2px 0 var(--mag); }
+        
+        .roles { font-size: 1.2rem; background: var(--fg); color: var(--bg); padding: 5px 15px; font-weight: bold; width: max-content;}
+        
+        .slider { flex: 1; display: flex; gap: 4rem; padding: 4rem; overflow-x: hidden; cursor: crosshair; align-items: center;}
+        
+        h2 { font-size: 1.5rem; color: #fff; border-bottom: 2px dashed #444; padding-bottom: 5px; margin-top: 0; text-transform: uppercase; letter-spacing: 2px;}
+        
+        .col { width: 450px; height: 75vh; flex-shrink: 0; display: flex; flex-direction: column; }
+        .card { flex: 1; display: flex; flex-direction: column; background: rgba(255,255,255,0.02); border: 1px solid #222; padding: 2.5rem; position: relative;}
+        .card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: var(--cyan); transform: scaleX(0); transform-origin: left; transition: 0.3s;}
+        .card:hover::before { transform: scaleX(1); }
+        
+        .combo-col { gap: 2rem; }
+        .combo-col > .card { flex: 1; }
+        
+        .hl { color: var(--mag); font-weight: bold; font-size: 1.2rem;}
+        p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; color: #aaa;}
+        
+        .project-title { font-family: 'Arial Black', sans-serif; font-size: 3rem; font-weight: bold; line-height: 1; margin: 0 0 1.5rem 0; text-transform: uppercase; color: #fff; text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);}
+        
+        .links { display: flex; flex-direction: column; gap: 10px; margin-top: 1rem;}
+        .links a { font-size: 1.1rem; color: var(--cyan); text-decoration: none; padding: 10px; border: 1px solid #222; transition: 0.2s;}
+        .links a:hover { background: rgba(0, 255, 255, 0.1); border-color: var(--cyan); padding-left: 20px;}
+        
+        .btn { display: flex; justify-content: center; align-items: center; background: transparent; color: var(--mag); font-family: 'Arial Black', sans-serif; font-size: 1.5rem; padding: 1.5rem; text-decoration: none; text-transform: uppercase; transition: 0.2s; border: 2px solid var(--mag); box-shadow: 0 0 10px rgba(240, 0, 255, 0.2);}
+        .btn:hover { background: var(--mag); color: var(--bg); box-shadow: 0 0 20px rgba(240, 0, 255, 0.5);}
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="glitch-text" data-text="YOUR NAME">YOUR NAME</div>
+        <div class="roles">ENGINEER / PRODUCT</div>
+    </div>
+
+    <div class="slider">
+        <div class="col combo-col">
+            <div class="card">
+                <h2>Ops.Vision</h2>
+                <div>
+                    <p><span class="hl">RPA_SYS</span> Advancing operations via business process automation algorithms.</p>
+                    <p><span class="hl">CLIENT_SYNC</span> Marshaling stakeholders to hit infrastructure targets.</p>
+                </div>
+            </div>
+            <div class="card" style="padding-bottom: 1.5rem;">
+                <h2>Net.Nodes</h2>
+                <div class="links">
+                    <a href="#">EMAIL_SECURE</a>
+                    <a href="#">GITHUB_SSH</a>
+                    <a href="#">LINKEDIN_PORT</a>
+                </div>
+                <div style="margin-top: auto; padding-top: 1.5rem;">
+                    <a href="#" class="btn">INITIALIZE HIRE</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <h2>Built.Binaries</h2>
+                <div class="project-title" style="margin-top: 1rem;">BOARD<br>GAME<br>HUB.exe</div>
+                <p>Live multiplayer platform powered by SignalR. Deployed to Azure via Docker multi-stage builds. Strictly gated by SonarQube quality constraints.</p>
+                <div style="margin-top: auto;">
+                    <a href="#" style="color:var(--bg); background: var(--fg); font-weight:bold; text-decoration:none; padding: 10px 20px; display: inline-block;">RUN AUDIT.BAT</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card" style="opacity: 0.5; border-style: dashed;">
+                <h2 style="color: #666; border-color: #333;">Pending.Alloc</h2>
+                <div class="project-title" style="color: #555; text-shadow: none; margin-top: 1rem;">FUTURE<br>BUILD</div>
+                <p style="color: #555;">Capacity secured for upcoming process automation integration testing.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        let targetScroll = 0;
+        let currentScroll = 0;
+
+        window.addEventListener('mousemove', (e) => {
+            const sliderRect = slider.getBoundingClientRect();
+            let xOffset = e.clientX - sliderRect.left;
+            xOffset = Math.max(0, Math.min(xOffset, sliderRect.width));
+            const percentage = xOffset / sliderRect.width;
+            const maxScroll = slider.scrollWidth - sliderRect.width;
+            targetScroll = percentage * maxScroll;
+        });
+
+        function loop() {
+            currentScroll += (targetScroll - currentScroll) * 0.08;
+            slider.scrollLeft = currentScroll;
+            requestAnimationFrame(loop);
+        }
+        loop();
+    </script>
+</body>
+</html>

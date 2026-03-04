@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restricted 2: Pure White & Orange Marker (Asymmetric Grid)</title>
+    <style>
+        :root { --bg: #ffffff; --fg: #000000; --accent: #ff6600; }
+        body { background: var(--bg); color: var(--fg); font-family: monospace; font-size: 16px; margin: 0; padding: 2rem; }
+        .grid { display: grid; grid-template-columns: 1fr 2fr; grid-template-rows: auto 1fr; gap: 2rem; max-width: 1400px; margin: 0 auto; height: calc(100vh - 4rem);}
+        
+        ::selection { background: var(--accent); color: var(--bg); }
+        .head { grid-column: span 2; border-bottom: 4px solid var(--fg); padding-bottom: 1rem; display: flex; justify-content: space-between; align-items: flex-end;}
+        h1 { font-family: 'Arial Black', sans-serif; font-size: 4rem; margin: 0; line-height: 1; text-transform: uppercase;}
+        .roles { font-size: 1.2rem; font-weight: bold;}
+        
+        .side { border-right: 4px solid var(--fg); padding-right: 2rem; display: flex; flex-direction: column;}
+        .main { padding-left: 1rem;}
+
+        h2 { background: var(--fg); color: var(--bg); display: inline-block; padding: 5px 15px; font-size: 1.5rem; margin-top: 0; text-transform: uppercase;}
+        .hl { background: var(--accent); color: var(--bg); display: inline; box-shadow: 4px 0 0 var(--accent), -4px 0 0 var(--accent); }
+        p { font-size: 1.1rem; line-height: 1.5; margin-bottom: 2rem; border-left: 4px solid var(--fg); padding-left: 1rem;}
+        
+        .project { border: 4px solid var(--fg); padding: 2rem; margin-bottom: 2rem; position: relative;}
+        .project-title { font-family: 'Arial Black', sans-serif; font-size: 3rem; color: var(--fg); margin: 0 0 1rem 0; letter-spacing: -1px;}
+        .project p { border-left: none; padding-left: 0; margin-bottom: 1rem;}
+        
+        .inline-cta { border: 4px solid var(--accent); padding: 1.5rem; margin-top: auto; text-align: center; }
+        .inline-cta p { border: none; padding: 0; margin: 0 0 1rem 0; font-weight: bold; color: var(--accent);}
+        .links { display: flex; justify-content: center; gap: 1rem;}
+        .links a { font-weight: bold; color: var(--fg); text-decoration: none; border-bottom: 4px solid var(--fg); padding-bottom: 2px; transition: 0.1s;}
+        .links a:hover { background: var(--accent); border-color: var(--accent); color: var(--bg);}
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="head">
+            <h1>YOUR NAME</h1>
+            <div class="roles">ENGINEER // PRODUCT OWNER</div>
+        </div>
+        
+        <div class="side">
+            <h2>Capabilities</h2>
+            <p><span class="hl">RPA & PROCESS</span><br>Streamlining operations via intelligent automation.</p>
+            <p><span class="hl">STAKEHOLDERS</span><br>Translating business goals into technical reality.</p>
+            <p><span class="hl">ARCHITECTURE</span><br>Azure implementations & container strategies.</p>
+            
+            <div class="inline-cta">
+                <p>AVAILABLE FOR INQUIRY</p>
+                <div class="links">
+                    <a href="#">EMAIL</a>
+                    <a href="#">GITHUB</a>
+                    <a href="#">LINKEDIN</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main">
+            <h2>Deliverables</h2>
+            
+            <div class="project">
+                <div class="project-title">BOARD GAME HUB</div>
+                <p>Live multiplayer platform powered by SignalR. Deployed to Azure via Docker multi-stage builds. Strictly gated by SonarQube.</p>
+                <a href="#" style="background:var(--fg); color:var(--bg); font-weight:bold; padding: 5px 10px; display:inline-block; text-decoration:none;">AUDIT REPO</a>
+            </div>
+
+            <div class="project" style="border-style: dashed; border-color: var(--fg); opacity: 0.8;">
+                <div class="project-title">FUTURE ENDEAVOR</div>
+                <p>Allocation reserved for the next phase of business automation and process improvement.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

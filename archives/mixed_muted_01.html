@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muted Mix 1: Slate Huge Type</title>
+    <style>
+        :root { --bg: #f4f4f5; --fg: #18181b; --accent: #64748b; }
+        body { background: var(--bg); color: var(--fg); font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 2rem; overflow-x: hidden; }
+        h1 { font-size: 8rem; line-height: 0.8; margin: 0 0 2rem 0; letter-spacing: -3px; color: var(--accent); }
+        h2 { font-size: 2.5rem; text-transform: uppercase; border-bottom: 4px solid var(--accent); display: inline-block; margin-bottom: 1rem; }
+        p, li { font-family: monospace; font-size: 1.1rem; line-height: 1.6; }
+        .grid { display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; }
+        .box { border: 4px solid var(--fg); padding: 2rem; position: relative; margin-bottom: 2rem; background: #fff;}
+        .box::after { content: ''; position: absolute; top: 8px; left: 8px; width: 100%; height: 100%; border: 4px solid var(--accent); z-index: -1; pointer-events: none; }
+        .project-title { font-size: 3rem; font-weight: bold; text-transform: uppercase; margin: 0 0 1rem 0; line-height: 1; }
+        .btn { display: inline-block; background: var(--accent); color: #fff; padding: 1.5rem; font-size: 1.5rem; text-decoration: none; font-weight: bold; text-transform: uppercase; border: 4px solid var(--accent); transition: 0.2s; box-shadow: 6px 6px 0 var(--fg); margin-top: 2rem; }
+        .btn:hover { background: #fff; color: var(--accent); transform: translate(2px, 2px); box-shadow: 4px 4px 0 var(--fg); }
+        footer { margin-top: 4rem; padding-top: 2rem; border-top: 4px solid var(--fg); display: flex; gap: 2rem; font-family: monospace; font-size: 1.2rem; font-weight: bold; }
+        footer a { color: var(--fg); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 3px; text-underline-offset: 4px; }
+    </style>
+</head>
+<body>
+    <h1>SOFTWARE<br>ENGINEER<br>& PRODUCT<br>OWNER_</h1>
+    <div class="grid">
+        <div>
+            <h2>Expertise</h2>
+            <ul>
+                <li><strong>Architecting</strong> robust, low-latency deployment pipelines and real-time multiplayer states.</li>
+                <li><strong>Client Relations</strong> & requirements gathering.</li>
+                <li><strong>Stakeholder Management</strong> to drive product vision from concept to container.</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Selected Work</h2>
+            <div class="box">
+                <div class="project-title">Board Game Hub</div>
+                <p>Architected a real-time multiplayer platform utilizing SignalR over websockets. Automated multi-stage Docker deployments to Azure. Defended by strict SonarQube quality gates.</p>
+                <a href="#" style="color:var(--accent); font-weight:bold; font-family:monospace; font-size: 1.2rem;">[ VIEW REPOSITORY ]</a>
+            </div>
+            
+            <div class="box" style="border-style: dashed; border-color: var(--accent);">
+                <div class="project-title" style="color: var(--accent);">[ FUTURE PROJECT SLOT ]</div>
+                <p>Architecture slot reserved for upcoming high-complexity web applications or backend systems currently in development.</p>
+            </div>
+            
+            <a href="mailto:your@email.com" class="btn">Inquire for Collaboration / Hiring</a>
+        </div>
+    </div>
+    <footer>
+        <a href="#">Email</a>
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+    </footer>
+</body>
+</html>

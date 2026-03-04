@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderate Color 2: Deep Violet & Seafoam (Fixed Sidebar)</title>
+    <style>
+        :root { --bg: #2b2d42; --fg: #edf2f4; --ac1: #8d99ae; --ac2: #84a98c; }
+        body { background: var(--bg); color: var(--fg); font-family: monospace; font-size: 16px; margin: 0; display: flex; height: 100vh; overflow: hidden; }
+        ::selection { background: var(--ac2); color: var(--bg); }
+        
+        .sidebar { width: 300px; background: rgba(0,0,0,0.2); border-right: 2px solid var(--ac1); display: flex; flex-direction: column; justify-content: space-between; padding: 2rem; box-sizing: border-box;}
+        .main { flex: 1; overflow-y: auto; padding: 4rem 5vw; position: relative;}
+        
+        h1 { font-family: 'Arial Black', sans-serif; font-size: 3rem; margin: 0 0 1rem 0; line-height: 0.9; letter-spacing: -2px; color: var(--ac2);}
+        .roles { font-size: 1rem; background: var(--ac1); color: var(--bg); padding: 5px 10px; font-weight: bold;}
+        
+        h2 { font-size: 1.5rem; border-bottom: 4px solid var(--ac2); display: inline-block; padding-bottom: 5px; margin-top: 0; text-transform: uppercase; letter-spacing: 2px;}
+        .hl { color: var(--ac2); font-weight: bold; background: rgba(132, 169, 140, 0.1); padding: 2px 5px;}
+        p { font-size: 1.1rem; line-height: 1.5; margin-bottom: 2rem;}
+        
+        .project { border: 2px solid var(--ac1); padding: 3rem; margin-bottom: 3rem; background: rgba(141, 153, 174, 0.05); position: relative;}
+        .project::before { content: ''; position: absolute; left: 0; top: 0; width: 10px; height: 100%; background: var(--ac2);}
+        .project-title { font-family: 'Arial Black', sans-serif; font-size: 2.5rem; line-height: 1; margin: 0 0 1rem 0; text-transform: uppercase; color: var(--fg);}
+        
+        .links { display: flex; flex-direction: column; gap: 10px; }
+        .links a { display: block; font-size: 1rem; font-weight: bold; color: var(--ac1); text-decoration: none; padding: 10px; border: 1px solid var(--ac1); transition: 0.2s; text-align: center;}
+        .links a:hover { background: var(--ac2); color: var(--bg); border-color: var(--ac2); }
+        
+        .floating-pill { position: fixed; bottom: 2rem; right: 2rem; background: var(--ac2); color: var(--bg); text-decoration: none; font-weight: bold; font-family: 'Arial Black', sans-serif; padding: 15px 30px; border-radius: 50px; text-transform: uppercase; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: 0.2s; border: 2px solid var(--ac2);}
+        .floating-pill:hover { background: var(--bg); color: var(--ac2); }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div>
+            <h1>YOUR<br>NAME</h1>
+            <div class="roles">SOFTWARE ENGR<br>PROD OWNER</div>
+        </div>
+        
+        <div class="links">
+            <a href="#">EMAIL</a>
+            <a href="#">GITHUB</a>
+            <a href="#">LINKEDIN</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <h2 style="margin-bottom: 2rem;">Expertise</h2>
+        <p><span class="hl">RPA / BPI</span><br>Transforming sluggish operations via aggressive business process automation.</p>
+        <p><span class="hl">STAKEHOLDER MGMT</span><br>Cultivating robust client relations while driving technical vision.</p>
+        <p><span class="hl">ARCHITECTURE</span><br>System design, Docker container orchestration, and Azure scaling.</p>
+        
+        <h2 style="margin-top: 3rem; margin-bottom: 2rem;">Work</h2>
+        <div class="project">
+            <div class="project-title">BOARD GAME HUB</div>
+            <p>Live multiplayer platform powered by SignalR. Deployed to Azure via Docker multi-stage builds. Strictly gated by SonarQube.</p>
+            <a href="#" style="color:var(--ac2); font-weight:bold; font-size: 1.2rem; text-decoration:underline;">[ AUDIT SOURCE DEPLOYMENT ]</a>
+        </div>
+
+        <div class="project" style="opacity: 0.6;">
+            <div class="project-title">FUTURE ENDEAVOR</div>
+            <p>Framework standing by for the forthcoming iteration of enterprise-grade process improvement tools.</p>
+        </div>
+    </div>
+    
+    <a href="#" class="floating-pill">Inquire For Hire</a>
+</body>
+</html>

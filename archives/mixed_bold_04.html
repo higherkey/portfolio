@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bold Mix 4: Bright Magenta Minimalist</title>
+    <style>
+        :root { --bg: #ff00ff; --fg: #000; --white: #fff; }
+        body { background: var(--bg); color: var(--fg); font-family: -apple-system, sans-serif; font-size: 18px; margin: 0; padding: 5vw; }
+        .hero { font-size: 8vw; font-weight: 900; line-height: 0.8; letter-spacing: -4px; margin-bottom: 2rem; color: var(--white);}
+        .hero span { color: var(--fg); }
+        h2 { font-size: 3rem; text-transform: uppercase; border-bottom: 8px solid var(--fg); display: inline-block; padding-bottom: 0px; margin-bottom: 1rem;}
+        
+        .flex { display: flex; gap: 4rem; flex-wrap: wrap; }
+        .flex > div { flex: 1; min-width: 300px; }
+        
+        p { font-family: monospace; font-size: 1.2rem; font-weight: bold; line-height: 1.5; padding: 15px; border: 4px solid var(--fg); background: var(--white); box-shadow: 5px 5px 0 var(--fg);}
+        
+        .work { margin-top: 4rem; border-top: 10px solid var(--fg); padding-top: 4rem;}
+        .project { border: 8px solid var(--fg); padding: 3rem; background: var(--bg); position: relative; margin-bottom: 3rem;}
+        .project-title { font-size: 4rem; font-weight: 900; letter-spacing: -2px; text-transform: uppercase; background: var(--fg); color: var(--bg); display: inline-block; padding: 0 15px; position: absolute; top: -35px; left: 20px;}
+        
+        .links { display: flex; gap: 1rem; margin-top: 2rem;}
+        .links a { padding: 10px 20px; border: 4px solid var(--fg); background: var(--white); color: var(--fg); font-family: monospace; font-weight: bold; text-decoration: none; text-transform: uppercase;}
+        .links a:hover { background: var(--fg); color: var(--bg); }
+        
+        .c-btn { display: block; width: 100%; border: 8px solid var(--white); background: var(--fg); color: var(--white); text-align: center; text-decoration: none; font-size: 4vw; font-weight: 900; padding: 2rem 0; margin-top: 5rem; transition: 0.2s; box-shadow: 10px 10px 0px var(--white); letter-spacing: -2px;}
+        .c-btn:hover { background: var(--white); color: var(--fg); box-shadow: -10px -10px 0px var(--fg); border-color: var(--fg); }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        SOFTWARE <span>ENGINEER</span><br>
+        PRODUCT <span>OWNER</span>
+    </div>
+    <div style="font-family: monospace; font-size: 2rem; font-weight: bold; border: 4px solid var(--fg); padding: 10px 20px; display: inline-block; background: var(--white); margin-bottom: 4rem;">YOUR_NAME_HERE</div>
+
+    <div class="flex">
+        <div>
+            <h2>Focus</h2>
+            <p><strong>[Architecting]</strong> Building system architecture, Azure Docker pipelines, and low-latency servers.</p>
+        </div>
+        <div>
+            <h2>Relations</h2>
+            <p><strong>[Clients / Stakeholders]</strong> Extensive experience managing client relations, product ownership, and stakeholder expectations.</p>
+        </div>
+        <div>
+            <h2>Contact</h2>
+            <div class="links" style="flex-direction: column;">
+                <a href="#">EMAIL ME -></a>
+                <a href="#">GITHUB -></a>
+                <a href="#">LINKEDIN -></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="work">
+        <div class="project">
+            <div class="project-title">BOARD GAME HUB</div>
+            <p style="box-shadow: none; border-color: transparent; background: transparent; padding:0; font-size: 1.5rem; margin-top: 2rem;">Real-time SignalR websockets, Azure Container Apps, SonarQube quality scaling.</p>
+            <a href="#" style="background:var(--white); border: 4px solid var(--fg); padding: 10px 20px; font-weight: bold; font-family: monospace; color: var(--fg); text-decoration: none; display: inline-block; margin-top: 20px;">[ SOURCE ]</a>
+        </div>
+        
+        <div class="project" style="border-style: dashed; border-color: var(--white);">
+            <div class="project-title" style="background: var(--white); color: var(--fg);">// FUTURE_SLOT</div>
+            <p style="box-shadow: none; border-color: transparent; background: transparent; padding:0; font-size: 1.5rem; margin-top: 2rem; color: var(--white);">Awaiting next complex architectural system deployment.</p>
+        </div>
+    </div>
+
+    <a href="#" class="c-btn">INQUIRE FOR COLLABORATION & HIRING</a>
+</body>
+</html>

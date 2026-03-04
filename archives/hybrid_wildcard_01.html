@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildcard 1: Horizontal Columns</title>
+    <style>
+        :root { --bg: #f4f4f0; --fg: #111; --ac: #ff3300; }
+        body { background: var(--bg); color: var(--fg); font-family: monospace; font-size: 16px; margin: 0; padding: 2rem; overflow-x: auto; overflow-y: hidden; display: flex; height: 100vh; gap: 2rem; box-sizing: border-box;}
+        ::selection { background: var(--ac); color: var(--bg); }
+        h1 { font-family: 'Arial Black', sans-serif; font-size: 6rem; line-height: 0.9; margin: 0 0 2rem 0; letter-spacing: -2px;}
+        h2 { border-bottom: 4px solid var(--ac); padding-bottom: 5px; margin-top: 0; text-transform: uppercase; display: inline-block;}
+        
+        .col { width: 400px; flex-shrink: 0; border: 4px solid var(--fg); padding: 2rem; display: flex; flex-direction: column; background: #fff;}
+        .col.hero { background: var(--ac); color: var(--bg); border-color: var(--ac); justify-content: center;}
+        
+        .roles { font-size: 1.5rem; font-weight: bold; margin-bottom: 2rem; border-left: 5px solid var(--bg); padding-left: 10px;}
+        .hl { color: var(--ac); font-weight: bold; background: var(--bg); padding: 2px 5px;}
+        p { font-size: 1.1rem; line-height: 1.5; margin-bottom: 1.5rem;}
+        
+        .project-title { font-family: 'Arial Black', sans-serif; font-size: 3rem; line-height: 1; margin: 0 0 1rem 0; text-transform: uppercase;}
+        
+        .links a { display: block; font-size: 1.2rem; font-weight: bold; color: var(--fg); text-decoration: none; padding: 10px 0; border-bottom: 2px solid var(--fg); transition: 0.1s;}
+        .links a:hover { background: var(--fg); color: var(--bg); padding-left: 10px;}
+        
+        .btn { display: flex; flex: 1; align-items: center; justify-content: center; background: var(--fg); font-family: 'Arial Black', sans-serif; font-size: 2rem; text-align: center; text-decoration: none; color: var(--bg); padding: 2rem; margin-top: auto; border: 4px solid var(--fg); transition: 0.2s;}
+        .btn:hover { background: transparent; color: var(--fg); }
+    </style>
+</head>
+<body>
+    <div class="col hero">
+        <h1>YOUR<br>NAME</h1>
+        <div class="roles">ENGINEER<br>PRODUCT OWNER</div>
+    </div>
+
+    <div class="col">
+        <h2>Process & Vision</h2>
+        <p><span class="hl">RPA Solutions</span><br>Driving business process improvement through aggressive workflow automation.</p>
+        <p><span class="hl">Stakeholder Mgmt</span><br>Translating complex business needs into actionable engineering targets.</p>
+        <p><span class="hl">Architecture</span><br>Building resilient, scalable containerized environments via Azure.</p>
+    </div>
+
+    <div class="col">
+        <h2>Deployed Artifact</h2>
+        <div class="project-title" style="color:var(--ac);">Board Game Hub</div>
+        <p style="font-weight: bold;">Live multiplayer platform powered by SignalR. Deployed to Azure via Docker multi-stage builds. Strictly gated by SonarQube.</p>
+        <a href="#" style="background:var(--fg); color:var(--bg); text-decoration:none; padding: 10px; font-weight:bold; display:inline-block; margin-top: auto;">[ AUDIT REPO_ ]</a>
+    </div>
+
+    <div class="col" style="border-style: dashed;">
+        <h2>Pending Artifact</h2>
+        <div class="project-title" style="color:#aaa;">Next App</div>
+        <p style="color:#666;">Capacity secured for upcoming business automation innovations.</p>
+    </div>
+
+    <div class="col" style="background: transparent; border: none; padding: 0;">
+        <div class="links" style="margin-bottom:auto;">
+            <h2>Network</h2>
+            <a href="#">EMAIL_ME</a>
+            <a href="#">GITHUB_REPO</a>
+            <a href="#">LINKEDIN_PROFILE</a>
+        </div>
+        <a href="#" class="btn">INQUIRE FOR<br>HIRING -></a>
+    </div>
+</body>
+</html>

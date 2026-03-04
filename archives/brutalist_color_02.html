@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Brutalist 2: Web Safe Blue</title>
+    <style>
+        body { background: #F5F5DC; color: #000; font-family: 'Times New Roman', Times, serif; padding: 5%; margin: 0; }
+        .header-panel { border: 2px solid #000; border-radius: 5px; padding: 2rem; text-align: center; margin-bottom: 3rem; background: #fff; }
+        h1 { font-size: 4rem; color: #0000FF; text-decoration: underline; margin: 0 0 1rem 0; }
+        .subtitle { font-family: monospace; font-size: 1.5rem; font-weight: bold; }
+        
+        .project-panel { border: 2px dashed #0000FF; padding: 2rem; background: #fff; }
+        .badge { background: #0000FF; color: #fff; padding: 5px 10px; font-family: monospace; display: inline-block; margin-bottom: 1rem; }
+        h2 { font-size: 3rem; margin: 0 0 1rem 0; }
+        p { font-size: 1.2rem; line-height: 1.5; }
+        
+        button { background: #0000FF; color: #fff; border: 4px outset #0000FF; font-family: monospace; font-size: 1.5rem; padding: 10px 20px; cursor: pointer; box-shadow: 5px 5px 0px #000; margin-top: 2rem;}
+        button:active { border: 4px inset #0000FF; box-shadow: 2px 2px 0px #000; transform: translate(3px, 3px); }
+    </style>
+</head>
+<body>
+    <div class="header-panel">
+        <h1>Your Name</h1>
+        <div class="subtitle">System Architect // Web Developer</div>
+    </div>
+
+    <div class="project-panel">
+        <div class="badge">FEATURED PROJECT</div>
+        <h2>Board Game Hub</h2>
+        <p>A full-stack implementation highlighting rigid code standards. Utilizing SignalR for real-time play, fully automated via CI/CD to Azure pipelines, and audited strictly by SonarQube rulesets.</p>
+        <p style="font-family: monospace; color: #0000FF;">STACK: Docker, Azure, SignalR, Vanilla HTML/CSS/JS</p>
+        <button onclick="window.location.href='#'">/ VIEW_CODE /</button>
+    </div>
+</body>
+</html>

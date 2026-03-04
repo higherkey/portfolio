@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muted Mix 2: Olive Raw Data</title>
+    <style>
+        :root { --bg: #f8f9fa; --fg: #212529; --accent: #6b705c; --line: #adb5bd; }
+        body { background: var(--bg); color: var(--fg); font-family: 'Courier New', monospace; padding: 4rem; margin: 0; max-width: 1000px; }
+        header { border-bottom: 2px dashed var(--accent); padding-bottom: 2rem; margin-bottom: 3rem; }
+        h1 { font-size: 3rem; margin: 0; font-weight: normal; }
+        h2 { font-size: 1.5rem; background: var(--accent); color: #fff; display: inline-block; padding: 0.2rem 1rem; margin-top: 0; }
+        .row { display: flex; border-top: 2px solid var(--fg); }
+        .col-30 { width: 30%; border-right: 2px solid var(--fg); padding: 2rem 2rem 2rem 0; }
+        .col-70 { width: 70%; padding: 2rem 0 2rem 2rem; }
+        p { font-size: 1.1rem; line-height: 1.5; }
+        .highlight { background: rgba(107, 112, 92, 0.2); border-left: 4px solid var(--accent); padding-left: 1rem; }
+        .btn { display: block; border: 2px solid var(--fg); text-align: center; font-size: 1.5rem; padding: 1.5rem; text-decoration: none; color: var(--fg); font-weight: bold; transition: all 0.2s; margin-top: 3rem; background: var(--bg); }
+        .btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+        .links { margin-top: 1rem; font-weight: bold; font-size: 1.2rem; }
+        .links a { color: var(--fg); margin-right: 1.5rem; text-decoration: none; border-bottom: 2px solid transparent; transition: 0.2s;}
+        .links a:hover { border-bottom-color: var(--accent); }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>YOUR NAME</h1>
+        <div style="font-size: 1.5rem; margin-top: 1rem;">> ROLE: Software Engineer & Product Owner</div>
+        <div class="links">
+            <a href="#">EMAIL</a> | <a href="#">GITHUB</a> | <a href="#">LINKEDIN</a>
+        </div>
+    </header>
+
+    <div class="row">
+        <div class="col-30">
+            <h2>EXPERTISE</h2>
+            <p><strong>[Architecting]</strong><br>Designing zero-dependency scalable backends.<br><br>
+            <strong>[Stakeholder Management]</strong><br>Aligning technical deliverables with business goals.<br><br>
+            <strong>[Client Relations]</strong><br>Translating complex requirements into deployed code.</p>
+        </div>
+        <div class="col-70">
+            <h2>PORTFOLIO.DIR</h2>
+            
+            <div style="margin-bottom: 3rem;">
+                <h3 style="font-size: 2rem; margin: 0 0 1rem 0; text-transform: uppercase;">1. Board Game Hub</h3>
+                <p class="highlight">A comprehensive Dockerized web app utilizing SignalR for live multiplayer. Deployed automatically to Azure with strict SonarQube gating.</p>
+                <a href="#" style="color:var(--accent); font-weight:bold;">[ AUDIT CODE ]</a>
+            </div>
+
+            <div style="opacity: 0.6; border: 2px dashed var(--line); padding: 1rem;">
+                <h3 style="font-size: 1.5rem; margin: 0 0 0.5rem 0;">2. [ SLOT_AVAILABLE ]</h3>
+                <p>Awaiting deployment of the next high-complexity architecture project.</p>
+            </div>
+
+            <a href="#" class="btn">>> INQUIRE FOR HIRING / FREELANCE COLLABORATION <<</a>
+        </div>
+    </div>
+</body>
+</html>

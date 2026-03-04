@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Option 1: Brutalist Minimal Resume</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --fg: #111111;
+            --border: #111111;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: 'Courier New', Courier, monospace; /* Monospace for that raw data feel */
+            line-height: 1.6;
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        header {
+            margin-bottom: 4rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 2rem;
+        }
+        h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .contact {
+            margin-top: 1rem;
+            display: flex;
+            gap: 2rem;
+            font-size: 0.9rem;
+        }
+        section {
+            margin-bottom: 3rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .project-block, .exp-block {
+            margin-bottom: 2rem;
+        }
+        .block-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+        .block-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .block-meta {
+            font-size: 0.9rem;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        ul {
+            list-style-type: square;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        a {
+            color: var(--fg);
+            text-decoration: none;
+            border-bottom: 1px solid var(--fg);
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            background-color: var(--fg);
+            color: var(--bg);
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+        .skill-item {
+            border: 1px solid var(--border);
+            padding: 0.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <div class="subtitle">Software Engineer & Architect</div>
+        <div class="contact">
+            <span>your.email@example.com</span>
+            <span>github.com/yourusername</span>
+            <span>Based in Your City</span>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Selected Work</h2>
+            <div class="project-block">
+                <div class="block-header">
+                    <span class="block-title">Board Game Hub Platform</span>
+                    <span class="block-meta">2026</span>
+                </div>
+                <p>A comprehensive full-stack application designed for board game enthusiasts to discover, organize, and play games in real-time lobbies.</p>
+                <ul>
+                    <li>Architected real-time lobby state management utilizing SignalR over websockets.</li>
+                    <li>Developed automated multi-stage CI/CD deployments to Azure Container Apps.</li>
+                    <li>Ensured robust code quality and security gating via advanced SonarQube integration.</li>
+                    <li>Implemented dynamic frontend experiences with vanilla technologies to maintain zero bloat.</li>
+                </ul>
+                <a href="#">View Source Code / Live Demo →</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">System Architecture</div>
+                <div class="skill-item">CI/CD & DevOps</div>
+                <div class="skill-item">Docker & Azure</div>
+                <div class="skill-item">Vanilla HTML/CSS/JS</div>
+                <div class="skill-item">SignalR/Websockets</div>
+                <div class="skill-item">Playwright Testing</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Professional Focus</h2>
+            <p>I specialize in building intelligent, performant backend systems and clean, zero-dependency frontends. My approach prioritizes maintainability, strict code quality standards (SonarQube), and fully automated deployment pipelines. By keeping architectures simple and dependencies low, I deliver robust software that scales predictably.</p>
+        </section>
+    </main>
+</body>
+</html>

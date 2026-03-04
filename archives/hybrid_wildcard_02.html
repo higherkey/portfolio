@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildcard 2: Micro-Bento Grid</title>
+    <style>
+        :root { --bg: #fff; --fg: #000; --ac: #0000ff; }
+        body { background: var(--bg); color: var(--fg); font-family: -apple-system, sans-serif; font-size: 16px; margin: 0; padding: 2vw; height: 100vh; box-sizing: border-box; display: flex; justify-content: center; align-items: center;}
+        
+        .bento { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(3, 1fr); gap: 1vw; width: 100%; max-width: 1400px; height: 90vh; }
+        .box { border: 2px solid var(--fg); padding: 2vw; display: flex; flex-direction: column; overflow: hidden; background: #fff;}
+        .box:hover { border-width: 6px; padding: calc(2vw - 4px); }
+        
+        .h-2 { grid-column: span 2; }
+        .h-3 { grid-column: span 3; }
+        .v-2 { grid-row: span 2; }
+        
+        h1 { font-family: monospace; font-size: 4vw; margin: 0; line-height: 0.9; font-weight: normal; letter-spacing: -2px; text-transform: uppercase;}
+        h2 { font-size: 1.5rem; text-transform: uppercase; margin: 0 0 1rem 0; color: var(--ac); font-family: monospace;}
+        p { font-size: 1.2rem; line-height: 1.4; margin: 0;}
+        .hl { font-weight: bold; background: var(--ac); color: var(--bg); padding: 0 5px;}
+        
+        .name-box { justify-content: center; background: var(--fg); color: var(--bg);}
+        .role-box { justify-content: center; font-family: monospace; font-size: 1.5vw; font-weight: bold; background: var(--ac); color: var(--bg);}
+        
+        .project-title { font-size: 3vw; font-weight: bold; line-height: 1; text-transform: uppercase; margin-bottom: 1rem; color: var(--ac);}
+        
+        .links a { display: flex; align-items: center; justify-content: center; flex: 1; border: 2px solid var(--fg); color: var(--fg); text-decoration: none; font-weight: bold; margin-bottom: 10px; transition: 0.1s; font-family: monospace; font-size: 1.2vw;}
+        .links a:hover { background: var(--fg); color: var(--bg);}
+        
+        .btn { border: none; background: var(--ac); color: var(--bg); font-family: monospace; font-weight: bold; font-size: 2.5vw; text-transform: uppercase; text-decoration: none; display: flex; justify-content: center; align-items: center; text-align: center; transition: 0.2s;}
+        .btn:hover { background: var(--fg); }
+    </style>
+</head>
+<body>
+    <div class="bento">
+        <div class="box h-2 name-box">
+            <h1>YOUR NAME</h1>
+        </div>
+        <div class="box role-box">
+            SOFTWARE ENGINEER
+        </div>
+        <div class="box role-box" style="background:var(--fg);">
+            PRODUCT OWNER
+        </div>
+        
+        <div class="box">
+            <h2>Process</h2>
+            <p>Advancing <span class="hl">RPA</span> and business process improvement to streamline operations.</p>
+        </div>
+        
+        <div class="box h-2 v-2" style="border: 6px solid var(--fg); padding: calc(2vw - 4px);">
+            <h2>Deployed</h2>
+            <div class="project-title">BOARD<br>GAME HUB</div>
+            <p style="font-family: monospace; font-size:1.1vw;">Live multiplayer platform powered by SignalR. Deployed to Azure via Docker multi-stage builds. Strictly gated by SonarQube.</p>
+            <a href="#" style="background:var(--fg); color:var(--bg); border:none; padding:10px; display:inline-block; font-family:monospace; font-weight:bold; margin-top:auto; text-decoration:none;">// REPOSITORY</a>
+        </div>
+        
+        <div class="box">
+            <h2>Stakeholders</h2>
+            <p>Managing <span class="hl">client relations</span> and requirements to drive product vision.</p>
+        </div>
+        
+        <div class="box links">
+            <h2>Network</h2>
+            <a href="#">EMAIL</a>
+            <a href="#">GITHUB</a>
+            <a href="#">LINKEDIN</a>
+        </div>
+        
+        <div class="box h-3 btn">
+            <a href="#" style="color:inherit; text-decoration:inherit;">INQUIRE FOR COLLABORATION -></a>
+        </div>
+    </div>
+</body>
+</html>

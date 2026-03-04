@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderate Color 5: Concrete & Vibrant Purple (Z-Pattern)</title>
+    <style>
+        :root { --bg: #d1d5db; --fg: #1f2937; --ac1: #7c3aed; --ac2: #10b981; }
+        body { background: var(--bg); color: var(--fg); font-family: monospace; font-size: 16px; margin: 0; padding: 4vw; overflow-x: hidden;}
+        ::selection { background: var(--ac1); color: #fff; }
+        
+        .row { display: flex; align-items: center; border-bottom: 4px solid var(--fg); padding: 4rem 0; }
+        .row:last-child { border-bottom: none; }
+        
+        .content { max-width: 600px; padding: 2rem; background: #fff; border: 4px solid var(--fg); box-shadow: 10px 10px 0 var(--ac1);}
+        
+        .row:nth-child(even) { justify-content: flex-end; }
+        .row:nth-child(even) .content { box-shadow: -10px 10px 0 var(--ac2); text-align: right;}
+        .row:nth-child(even) .hl { border-bottom-color: var(--ac1); color: var(--ac2); display: inline-block; width: 100%;}
+        
+        h1 { font-family: 'Arial Black', sans-serif; font-size: 5rem; margin: 0; line-height: 0.9; text-transform: uppercase; color: var(--ac1);}
+        .roles { font-size: 1.2rem; font-weight: bold; background: var(--ac2); color: #fff; padding: 5px 15px; display: inline-block; margin-top: 1rem;}
+        
+        h2 { font-size: 1.8rem; font-family: 'Arial Black', sans-serif; text-transform: uppercase; margin-top: 0; background: var(--fg); color: #fff; padding: 5px 15px; display: inline-block;}
+        .hl { display: block; font-weight: bold; font-size: 1.2rem; margin-bottom: 5px; text-transform: uppercase; border-bottom: 2px solid var(--ac2); padding-bottom: 3px; color: var(--ac1);}
+        p { font-size: 1.1rem; line-height: 1.5; margin-bottom: 2rem; font-weight: bold;}
+        
+        .project-title { font-family: 'Arial Black', sans-serif; font-size: 3rem; color: var(--ac1); margin: 0 0 1rem 0; line-height: 1; text-transform: uppercase;}
+        
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: left; margin-bottom: 1.5rem;}
+        .contact-grid a { background: var(--fg); color: #fff; border: 2px solid var(--fg); padding: 10px; font-weight: bold; text-decoration: none; transition: 0.2s; text-align: center;}
+        .contact-grid a:hover { background: var(--ac1); border-color: var(--ac1); }
+        .main-cta { display: block; background: var(--ac2); font-family: 'Arial Black', sans-serif; font-size: 1.5rem; text-align: center; color: #fff; padding: 1rem; text-decoration: none; border: 4px solid var(--fg); text-transform: uppercase;}
+        .main-cta:hover { background: var(--bg); color: var(--fg); }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="content" style="box-shadow: none; border: none; background: transparent; padding: 0;">
+            <h1>YOUR<br>NAME</h1>
+            <div class="roles">ENGINEER // PRODUCT</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="content">
+            <h2 style="float: right;">Overview</h2>
+            <div style="clear: both;"></div>
+            <p><span class="hl">RPA & Automation</span>Eliminating manual bottlenecks through aggressive business process improvement.</p>
+            <p><span class="hl">Product Ownership</span>Defining vision, marshaling stakeholders, and executing clear client relations.</p>
+            <p><span class="hl">System Architecture</span>Constructing undeniable backend infrastructure utilizing Docker and Azure.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="content">
+            <h2>Output History</h2>
+            <div style="margin-bottom: 3rem;">
+                <div class="project-title">Board Game Hub</div>
+                <p>Live multiplayer platform powered by SignalR. Deployed to Azure via Docker multi-stage builds. Strictly gated by SonarQube.</p>
+                <a href="#" style="background:var(--fg); color:#fff; font-weight:bold; padding: 10px 20px; display:inline-block; text-decoration:none;">AUDIT REPO.EXE_</a>
+            </div>
+
+            <div style="opacity: 0.6;">
+                <div class="project-title" style="color: var(--fg);">Future Release</div>
+                <p>System environments prepared for the next wave of business automation innovations.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="content">
+            <h2 style="float: right; margin-bottom: 2rem;">Initiate System</h2>
+            <div style="clear: both;"></div>
+            
+            <div class="contact-grid">
+                <a href="#">EMAIL</a>
+                <a href="#">GITHUB</a>
+                <a href="#">LINKEDIN</a>
+                <a href="#" style="background: var(--ac1); border-color: var(--ac1);">RESUME</a>
+            </div>
+            <a href="#" class="main-cta">Inquire For Hire</a>
+        </div>
+    </div>
+</body>
+</html>

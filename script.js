@@ -12,7 +12,7 @@ function scrollSlider(direction, evt) {
 }
 
 // Click to Focus logic
-window.focusCol = function(element) {
+globalThis.focusCol = function(element) {
     element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
 }
 
@@ -29,9 +29,14 @@ slider.addEventListener('wheel', (evt) => {
     }
 }, { passive: false });
 
-// Prevent clicking local links from propagating to focusCol
-document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', (e) => e.stopPropagation());
+// Initialize column listeners
+document.querySelectorAll('.col').forEach(col => {
+    col.addEventListener('click', () => focusCol(col));
+    
+    // Accessibility: make sure links don't trigger column focus if clicked directly
+    col.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', (e) => e.stopPropagation());
+    });
 });
 
 // Toggle navigation arrows based on scroll position
@@ -39,6 +44,8 @@ function updateArrows() {
     const leftArrow = document.querySelector('.hit-area.left');
     const rightArrow = document.querySelector('.hit-area.right');
     
+    if (!leftArrow || !rightArrow) return;
+
     // Allow a small 5px buffer for precise rounding issues
     if (slider.scrollLeft <= 5) {
         leftArrow.classList.add('hidden');

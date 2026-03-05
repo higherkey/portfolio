@@ -92,6 +92,13 @@ h1 {
 
 /* HIT AREAS FOR ARROWS */
 .hit-area { 
+    background: transparent;
+    border: none;
+    padding: 0;
+    font: inherit;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
     position: absolute; 
     top: 0; 
     bottom: 16px; 
@@ -250,6 +257,23 @@ p {
     transform: translate(-4px, -4px); 
     box-shadow: 8px 8px 0 var(--fg);
 }
+
+/* CARDS / INLINE STYLE REPLACEMENTS */
+.card-process { flex: 1.5; }
+.card-connectivity { border-style: dashed; flex: 1; }
+.card-content { margin-top: 1rem; }
+
+.h2-active { color: var(--ac); border-color: var(--ac); }
+.project-actions { margin-top: auto; display: flex; flex-direction: column; gap: 0.5rem; }
+.btn-outline { background: transparent; color: var(--fg); }
+
+.card-pending { background: transparent; box-shadow: none; border: 4px solid #aaa; }
+.text-pending { color: #aaa; border-color: #aaa; }
+.h2-pending { border-color: #aaa; }
+.desc-pending { color: #666; }
+
+.col-end { justify-content: center; align-items: center; width: 100px; padding: 2rem; }
+.end-text { transform: rotate(-90deg); font-family: 'Arial Black', sans-serif; font-size: 4rem; color: #ccc; white-space: nowrap; }
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 1024px) {

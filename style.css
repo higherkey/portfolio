@@ -94,7 +94,7 @@ h1 {
 .hit-area { 
     background: transparent;
     border: none;
-    padding: 0;
+    padding: 0 .1rem;
     font: inherit;
     outline: none;
     appearance: none;
@@ -102,7 +102,6 @@ h1 {
     position: absolute; 
     top: 0; 
     bottom: 16px; 
-    width: 12vw; 
     z-index: 40; 
     cursor: pointer; 
     display: flex; 
@@ -120,10 +119,15 @@ h1 {
 .hit-overlay { 
     font-family: 'Arial Black', sans-serif; 
     font-size: 8rem; 
+    line-height: 1; /* Keep height tight to the text */
     color: rgba(255, 51, 0, 0); 
     transition: 0.2s; 
     pointer-events: none; 
     mix-blend-mode: multiply;
+}
+
+.hit-area:hover {
+    background: rgba(255, 51, 0, 0.05); /* very gentle tracking box */
 }
 
 .hit-area:hover .hit-overlay { 

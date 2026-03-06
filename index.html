@@ -9,13 +9,19 @@
 <body>
     <header>
         <div class="header-titles">
-            <h1>ISAAC<br>AHLFIELD</h1>
+            <h1>ISAAC <br>AHLFIELD</h1>
             <div class="roles">SOFTWARE ENGINEER<br>PRODUCT OWNER</div>
         </div>
-        <nav class="header-links">
-            <a href="mailto:isaac.ahlfield@gmail.com" target="_blank" rel="noopener noreferrer">EMAIL</a>
-            <a href="https://github.com/higherKey" target="_blank" rel="noopener noreferrer">GITHUB</a>
-            <a href="https://linkedin.com/in/isaac-ahlfield" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+        <button class="mobile-nav-btn" aria-label="Toggle Menu" onclick="document.body.classList.toggle('nav-open')" type="button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square">
+                <line x1="12" y1="4" x2="12" y2="20"></line>
+                <line x1="4" y1="12" x2="20" y2="12"></line>
+            </svg>
+        </button>
+        <nav class="header-links" aria-label="Social Links">
+            <a href="mailto:i.found.the.penni@gmail.com" target="_blank" rel="noopener noreferrer">EMAIL <span class="link-label">contact</span></a>
+            <a href="https://github.com/higherKey" target="_blank" rel="noopener noreferrer">GITHUB <span class="link-label">create</span></a>
+            <a href="https://linkedin.com/in/isaac-ahlfield" target="_blank" rel="noopener noreferrer">LINKEDIN <span class="link-label">connect</span></a>
         </nav>
     </header>
 

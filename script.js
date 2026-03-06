@@ -19,6 +19,9 @@ globalThis.focusCol = function(element) {
 // Wheel proxy to horizontal scroll
 let isWheeling = false;
 slider.addEventListener('wheel', (evt) => {
+    // Disable scroll jacking on mobile/tablet widths to preserve natural vertical scrolling
+    if (window.innerWidth <= 1024) return;
+    
     if (evt.deltaY !== 0) {
         evt.preventDefault();
         if (isWheeling) return;

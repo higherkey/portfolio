@@ -303,6 +303,8 @@ p {
 
 /* CARDS / INLINE STYLE REPLACEMENTS */
 .card-content { margin-top: 1rem; }
+.card-artifact { box-shadow: 8px 8px 0 var(--ac); }
+.col:hover .card-artifact:not(.no-hover) { box-shadow: 12px 12px 0 var(--ac); }
 
 .h2-active { color: var(--ac); border-color: var(--ac); }
 .project-actions { margin-top: auto; display: flex; flex-direction: column; gap: 0.5rem; }

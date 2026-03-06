@@ -21,18 +21,57 @@ body {
     color: var(--bg); 
 }
 
-.sidebar { 
+header { 
     width: 400px; 
     flex-shrink: 0; 
     background: var(--ac); 
     color: var(--bg); 
     display: flex; 
     flex-direction: column; 
-    justify-content: center; 
+    justify-content: space-between; 
     padding: 3rem; 
     border-right: 6px solid var(--fg); 
     z-index: 50; 
     position: relative;
+}
+
+.header-links {
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+.header-links a {
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    color: var(--bg); 
+    text-decoration: none; 
+    padding: 10px 0; 
+    border-bottom: 2px solid var(--bg); 
+    transition: 0.1s; 
+    display: flex; 
+    justify-content: space-between; 
+    position: relative; 
+}
+
+.header-links a::after { 
+    content: '→'; 
+    opacity: 0; 
+    transition: 0.2s;
+}
+
+.header-links a:hover { 
+    color: var(--fg); 
+    border-color: var(--fg); 
+}
+
+.header-links a:hover::after { 
+    opacity: 1; 
+}
+
+.header-titles {
+    margin: auto 0;
 }
 
 h1 { 
@@ -263,8 +302,6 @@ p {
 }
 
 /* CARDS / INLINE STYLE REPLACEMENTS */
-.card-process { flex: 1.5; }
-.card-connectivity { border-style: dashed; flex: 1; }
 .card-content { margin-top: 1rem; }
 
 .h2-active { color: var(--ac); border-color: var(--ac); }
@@ -284,7 +321,7 @@ p {
     body {
         flex-direction: column;
     }
-    .sidebar {
+    header {
         width: 100%;
         padding: 2rem;
         border-right: none;
@@ -294,13 +331,19 @@ p {
         align-items: center;
         box-sizing: border-box;
     }
+    .header-links {
+        width: 40%;
+        margin-top: 0;
+    }
     h1 {
         font-size: 3.5rem;
         margin: 0;
     }
+    .header-titles {
+        margin: 0;
+    }
     .roles {
         font-size: 1.2rem;
-        text-align: right;
     }
     .slider {
         padding: 2rem;
@@ -315,14 +358,20 @@ p {
 }
 
 @media (max-width: 600px) {
-    .sidebar {
+    header {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
     }
+    .header-links {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .header-titles {
+        margin: 0;
+    }
     h1 { font-size: 2.5rem; }
     .roles {
-        text-align: center;
         border-left: none;
         border-top: 5px solid var(--bg);
         padding-left: 0;

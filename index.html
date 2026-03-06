@@ -7,12 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="sidebar">
-        <h1>ISAAC<br>AHLFIELD</h1>
-        <div class="roles">SOFTWARE ENGINEER<br>PRODUCT OWNER</div>
-    </div>
+    <header>
+        <div class="header-titles">
+            <h1>ISAAC<br>AHLFIELD</h1>
+            <div class="roles">SOFTWARE ENGINEER<br>PRODUCT OWNER</div>
+        </div>
+        <div class="header-links">
+            <a href="mailto:contact@example.com" target="_blank" rel="noopener noreferrer">EMAIL <span>IO</span></a>
+            <a href="https://github.com/higherKey" target="_blank" rel="noopener noreferrer">GITHUB <span>SRC</span></a>
+            <a href="https://linkedin.com/in/isaac-ahlfield" target="_blank" rel="noopener noreferrer">LINKEDIN <span>NET</span></a>
+        </div>
+    </header>
 
-    <div class="slider-wrapper">
+    <main class="slider-wrapper">
         <button class="hit-area left" onclick="scrollSlider(-1, event)" aria-label="Scroll Left" type="button">
             <div class="hit-overlay"><<</div>
         </button>
@@ -23,22 +30,13 @@
         <div class="slider" id="slider">
 
             <!-- Col 1 -->
-            <div class="col combo-col">
+            <div class="col">
                 <div class="card card-process no-hover">
                     <h2>Process & Vision</h2>
                     <div class="card-content">
                         <p><span class="hl">Software Architecture</span><br>Architecting robust, scalable backends and containerized solutions.</p>
                         <p><span class="hl">Product Ownership</span><br>Expertise in stakeholder management and bridging the gap between business needs and technical execution.</p>
                         <p><span class="hl">Velocity & Guardrails</span><br>Accelerating development with AI tools like Antigravity while strictly gating quality with tools like SonarQube.</p>
-                    </div>
-                </div>
-
-                <div class="card card-connectivity no-hover">
-                    <h2>Connectivity</h2>
-                    <div class="links card-content">
-                        <a href="mailto:contact@example.com" target="_blank" rel="noopener noreferrer">EMAIL <span>IO</span></a>
-                        <a href="https://github.com/higherKey" target="_blank" rel="noopener noreferrer">GITHUB <span>SRC</span></a>
-                        <a href="https://linkedin.com/in/isaac-ahlfield" target="_blank" rel="noopener noreferrer">LINKEDIN <span>NET</span></a>
                     </div>
                 </div>
             </div>
@@ -71,7 +69,7 @@
                 <div class="end-text">END_OF_LINE</div>
             </div>
         </div>
-    </div>
+    </main>
 
     <script src="script.js"></script>
 </body>

@@ -12,11 +12,11 @@
             <h1>ISAAC<br>AHLFIELD</h1>
             <div class="roles">SOFTWARE ENGINEER<br>PRODUCT OWNER</div>
         </div>
-        <div class="header-links">
+        <nav class="header-links">
             <a href="mailto:isaac.ahlfield@gmail.com" target="_blank" rel="noopener noreferrer">EMAIL</a>
             <a href="https://github.com/higherKey" target="_blank" rel="noopener noreferrer">GITHUB</a>
             <a href="https://linkedin.com/in/isaac-ahlfield" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
-        </div>
+        </nav>
     </header>
 
     <main class="slider-wrapper">
@@ -30,22 +30,22 @@
         <div class="slider" id="slider">
 
             <!-- Col 1 -->
-            <div class="col">
-                <div class="card card-process no-hover">
+            <div class="col no-click">
+                <article class="card card-process">
                     <h2>Process & Vision</h2>
                     <div class="card-content">
                         <p><span class="hl">Software Architecture</span><br>Architecting robust, scalable backends and containerized solutions.</p>
                         <p><span class="hl">Product Ownership</span><br>Expertise in stakeholder management and bridging the gap between business needs and technical execution.</p>
                         <p><span class="hl">Velocity & Guardrails</span><br>Accelerating development with AI tools like Antigravity while strictly gating quality with tools like SonarQube.</p>
                     </div>
-                </div>
+                </article>
             </div>
 
             <!-- Col 2: The Project -->
             <div class="col">
-                <div class="card card-artifact">
+                <article class="card card-artifact">
                     <h2 class="h2-active">Active Artifact</h2>
-                    <div class="project-title">Board Game Hub</div>
+                    <h3 class="project-title">Board Game <span class="accent-orange">Hub</span></h3>
                     <p>Live multiplayer platform powered by SignalR. Deployed to Azure via Docker multi-stage builds. Strictly gated by SonarQube.</p>
                     
                     <div class="project-actions">
@@ -53,16 +53,25 @@
                         <a href="https://board-game-hub-alpha.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn">VIEW DEPLOYMENT</a>
                         <a href="https://github.com/higherKey/board-game-hub" target="_blank" rel="noopener noreferrer" class="btn btn-outline">AUDIT SOURCE</a>
                     </div>
-                </div>
+                </article>
             </div>
 
             <!-- Col 3: Future State placeholder -->
             <div class="col">
-                <div class="card card-pending">
+                <article class="card card-concept">
+                    <h2 class="text-concept h2-concept">Concept Artifact</h2>
+                    <h3 class="project-title text-concept">Shared Payment Helper</h3>
+                    <p class="desc-concept">Leverage Stripe's new Shared Payment Tokens (SPTs) to reduce friction for friends and family purchases.</p>
+                </article>
+            </div>
+
+            <!-- Col 4: Future State placeholder -->
+            <div class="col no-click">
+                <article class="card card-pending">
                     <h2 class="text-pending h2-pending">Pending Artifact</h2>
-                    <div class="project-title text-pending">Next App</div>
-                    <p class="desc-pending">Capacity secured for upcoming business automation innovations.</p>
-                </div>
+                    <h3 class="project-title text-pending">Future Idea...</h3>
+                    <p class="desc-pending">Capacity secured for upcoming business innovations, personal productivity, and shared fun.</p>
+                </article>
             </div>
             
             <div class="col col-end">

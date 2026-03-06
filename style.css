@@ -220,13 +220,13 @@ h1 {
     transition: 0.2s;
 }
 
-.col:hover .card:not(.card-process):not(.card-pending) { 
+.col:hover .card:not(.card-process) { 
     transform: translate(-4px, -4px); 
     box-shadow: 12px 12px 0 var(--fg); 
     border-color: var(--ac); 
 }
 
-.col:hover .card-pending {
+.col:hover {
     border-color: var(--fg);
 }
 
@@ -337,11 +337,6 @@ p {
 .text-concept { border-color: var(--gy-m); }
 .h2-concept { color: var(--gy-m); border-color: var(--gy-m); }
 .desc-concept { color: var(--gy-d); }
-
-.card-pending { background: transparent; box-shadow: none; border: 4px solid var(--gy-m); }
-.text-pending { color: var(--gy-m); border-color: var(--gy-m); }
-.h2-pending { border-color: var(--gy-m); }
-.desc-pending { color: var(--gy-d); }
 
 .col-end { justify-content: center; align-items: center; width: 100px; padding: 2rem; }
 .end-text { transform: rotate(-90deg); font-family: 'Arial Black', sans-serif; font-size: 4rem; color: var(--gy-l); white-space: nowrap; }

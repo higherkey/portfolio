@@ -56,3 +56,30 @@ slider.addEventListener('scroll', updateArrows);
 window.addEventListener('resize', updateArrows);
 // Initial check right after fonts/layout load
 setTimeout(updateArrows, 100);
+
+// Toggle vertical page indicators based on scroll position
+const mainContent = document.querySelector('.main-content');
+function updateVerticalArrows() {
+    const topIndicator = document.querySelector('.page-indicator.top');
+    const bottomIndicator = document.querySelector('.page-indicator.bottom');
+    if (!mainContent || !topIndicator || !bottomIndicator) return;
+
+    // Allow a small 5px buffer
+    if (mainContent.scrollTop <= 5) {
+        topIndicator.classList.add('hidden');
+    } else {
+        topIndicator.classList.remove('hidden');
+    }
+    
+    if (mainContent.scrollTop >= mainContent.scrollHeight - mainContent.clientHeight - 5) {
+        bottomIndicator.classList.add('hidden');
+    } else {
+        bottomIndicator.classList.remove('hidden');
+    }
+}
+
+if (mainContent) {
+    mainContent.addEventListener('scroll', updateVerticalArrows);
+    window.addEventListener('resize', updateVerticalArrows);
+    setTimeout(updateVerticalArrows, 100);
+}

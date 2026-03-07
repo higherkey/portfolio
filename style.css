@@ -134,12 +134,97 @@ h1 {
 
 #about {
     padding: 3.5rem;
-    justify-content: flex-start;
 }
 
-.about-card {
-    max-width: 600px;
-    margin-top: -2rem; /* visually nudge up */
+.about-grid {
+    display: flex;
+    gap: 3rem;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Offset Logic: 60/40 heights */
+.about-col:first-child .card-tall,
+.about-col:last-child .card-tall {
+    flex: 6.5;
+}
+
+.about-col:first-child .card-short,
+.about-col:last-child .card-short {
+    flex: 3.5;
+}
+
+.about-card-title {
+    color: var(--ac);
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-list li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.about-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--ac);
+}
+
+/* VERTICAL PAGE INDICATORS */
+.page-indicator {
+    position: fixed;
+    left: 400px; /* Header width */
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 0.85rem;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    font-family: 'Arial Black', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+.page-indicator:hover {
+    color: var(--ac);
+    background: rgba(255, 51, 0, 0.12);
+}
+.page-indicator.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.page-indicator.top {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(255, 51, 0, 0.15), transparent);
+}
+.page-indicator.bottom {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(255, 51, 0, 0.15), transparent);
 }
 
 /* SLIDER WITH SNAP */
@@ -206,6 +291,8 @@ h1 {
     transition: background 0.2s, opacity 0.2s; 
     user-select: none; 
     -webkit-user-select: none;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 40%, black 60%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 40%, black 60%, transparent);
 }
 
 .hit-area.left { left: 0; }
@@ -214,7 +301,7 @@ h1 {
 
 .hit-overlay { 
     font-family: 'Arial Black', sans-serif; 
-    font-size: 8rem; 
+    font-size: 6rem; 
     line-height: 1; /* Keep height tight to the text */
     color: rgba(255, 51, 0, 0); 
     transition: 0.2s; 
@@ -376,6 +463,16 @@ p {
 .project-actions { margin-top: auto; display: flex; flex-direction: column; gap: 0.5rem; }
 .btn-outline { background: transparent; color: var(--fg); }
 
+/* WIP BUTTON STYLING */
+.btn-wip {
+    background: transparent;
+    color: #111; /* Consistent with your --fg */
+    border-color: #111;
+    pointer-events: none; /* Disables all hover/click events */
+}
+
+
+
 .card-concept { background: transparent; box-shadow: 8px 8px 0 var(--gy-l); }
 .text-concept { border-color: var(--gy-m); }
 .h2-concept { color: var(--gy-m); border-color: var(--gy-m); }
@@ -392,6 +489,9 @@ p {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
+    .page-indicator {
+        left: 0;
+    }
     body {
         flex-direction: column;
     }
@@ -552,5 +652,16 @@ p {
     .col { width: 85vw; }
     .card {
         padding: 1rem;
+    }
+    .about-grid {
+        flex-direction: column;
+        height: auto;
+    }
+    .about-col {
+        height: auto;
+    }
+    .about-col .card {
+        flex: none !important;
+        min-height: auto;
     }
 }

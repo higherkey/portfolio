@@ -26,16 +26,68 @@
     </header>
 
     <main class="main-content">
-        <!-- PAGE 1: About Me -->
+        <button class="page-indicator top hidden" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})" aria-label="Scroll to About" type="button">
+            <span class="indicator-arrow">↑</span>
+            <span class="indicator-label">ABOUT</span>
+        </button>
+        <button class="page-indicator bottom" onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})" aria-label="Scroll to Portfolio" type="button">
+            <span class="indicator-label">PORTFOLIO</span>
+            <span class="indicator-arrow">↓</span>
+        </button>
+
+        <!-- PAGE 1: About Me (Expanded) -->
         <section class="page" id="about">
-            <article class="card card-process about-card">
-                <h2>Process & Vision</h2>
-                <div class="card-content">
-                    <p><span class="hl">Software Architecture</span><br>Architecting robust, scalable backends and containerized solutions.</p>
-                    <p><span class="hl">Product Ownership</span><br>Expertise in stakeholder management and bridging the gap between business needs and technical execution.</p>
-                    <p><span class="hl">Velocity & Guardrails</span><br>Accelerating development with AI tools like Antigravity while strictly gating quality with tools like SonarQube.</p>
+            <div class="about-grid">
+                <!-- COLUMN 1 -->
+                <div class="about-col">
+                    <!-- ARCHITECTURE (TALL) -->
+                    <article class="card card-tall">
+                        <span class="about-card-title">Architecture & Systems</span>
+                        <h3>Engineering for scale</h3>
+                        <p>I specialize in building robust, containerized backends that bridge technical excellence with business requirements.</p>
+                        <ul class="about-list">
+                            <li><strong>Cloud Architecture</strong>: Designing scalable solutions on GCP and Azure.</li>
+                            <li><strong>CI/CD & Quality</strong>: Implementing strict SonarQube gating and automated pipelines.</li>
+                            <li><strong>Data Systems</strong>: Expertise in PostgreSQL, Supabase, and Redis.</li>
+                        </ul>
+                    </article>
+
+                    <!-- EXPERIENCE (SHORT) -->
+                    <article class="card card-short">
+                        <span class="about-card-title">Experience</span>
+                        <p>Leading technical initiatives across fintech and gaming sectors, focusing on velocity and security.</p>
+                        <ul class="about-list">
+                            <li>Board Game Hub (Lead Developer)</li>
+                            <li>ExpressZen (Creator/Owner)</li>
+                        </ul>
+                    </article>
                 </div>
-            </article>
+
+                <!-- COLUMN 2 -->
+                <div class="about-col">
+                    <!-- PRODUCT (SHORT) -->
+                    <article class="card card-short">
+                        <span class="about-card-title">Product Ownership</span>
+                        <p>Expertise in bridging the gap between stakeholder vision and engineering execution.</p>
+                        <ul class="about-list">
+                            <li>Backlog Refinement & Prioritization</li>
+                            <li>Strategic Roadmap Development</li>
+                        </ul>
+                    </article>
+
+                    <!-- TECH STACK (TALL) -->
+                    <article class="card card-tall">
+                        <span class="about-card-title">Tech Stack</span>
+                        <h3>Tools of the trade</h3>
+                        <div class="card-content">
+                            <p><strong>LANGUAGES</strong>: Go, Python, C#, TypeScript, HTML/CSS</p>
+                            <p><strong>FRAMEWORKS</strong>: React, Node.js, ASP.NET Core</p>
+                            <p><strong>INFRASTRUCTURE</strong>: Docker, Kubernetes, Terraform</p>
+                            <p><strong>OPERATIONS</strong>: Git/CI, SonarQube, Stripe API</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
 
         <!-- PAGE 2: Portfolio -->
@@ -64,7 +116,30 @@
                 </article>
             </div>
 
-            <!-- Col 3: Concept project -->
+            <!-- Col 3: ExpressZen in Progress -->
+            <div class="col">
+                <div class="card card-pending">
+                    <h2 class="text-pending h2-pending">WIP Artifact</h2>
+                    <div class="project-title text-pending">ExpressZen</div>
+                    <p class="desc-pending">A regex visualization and testing tool currently in development. Focused on simplifying complex pattern matching syntax.</p>
+                    
+                    <div class="project-actions">
+                        <button class="btn btn-wip" type="button" disabled>WIP</button>
+                        <a href="https://github.com/higherKey/express-zen" target="_blank" rel="noopener noreferrer" class="btn btn-outline disabled" style="pointer-events: none; opacity: 0.5;">SOURCE UNAVAILABLE</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Col 3: RPG Concept -->
+            <div class="col">
+                <article class="card card-concept">
+                    <h2 class="text-concept h2-concept">Concept Artifact</h2>
+                    <h3 class="project-title text-concept">AI RPG System</h3>
+                    <p class="desc-concept">A GM-less, player-driven roleplaying experience where AI manages environmental reactions and maintains complex world states.</p>
+                </article>
+            </div>
+
+            <!-- Col 4: Payment Concept -->
             <div class="col">
                 <article class="card card-concept">
                     <h2 class="text-concept h2-concept">Concept Artifact</h2>

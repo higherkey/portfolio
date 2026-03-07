@@ -16,21 +16,10 @@ globalThis.focusCol = function(element) {
     element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
 }
 
-// Wheel proxy to horizontal scroll
-let isWheeling = false;
-slider.addEventListener('wheel', (evt) => {
-    // Disable scroll jacking on mobile/tablet widths to preserve natural vertical scrolling
-    if (window.innerWidth <= 1024) return;
-    
-    if (evt.deltaY !== 0) {
-        evt.preventDefault();
-        if (isWheeling) return;
-        isWheeling = true;
-        const direction = evt.deltaY > 0 ? 1 : -1;
-        scrollSlider(direction, null);
-        setTimeout(() => isWheeling = false, 500);
-    }
-}, { passive: false });
+// Click to Focus logic
+globalThis.focusCol = function(element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+}
 
 // Initialize column listeners
 document.querySelectorAll('.col').forEach(col => {

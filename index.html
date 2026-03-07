@@ -25,27 +25,29 @@
         </nav>
     </header>
 
-    <main class="slider-wrapper">
-        <button class="hit-area left" onclick="scrollSlider(-1, event)" aria-label="Scroll Left" type="button">
-            <div class="hit-overlay"><<</div>
-        </button>
-        <button class="hit-area right" onclick="scrollSlider(1, event)" aria-label="Scroll Right" type="button">
-            <div class="hit-overlay">>></div>
-        </button>
+    <main class="main-content">
+        <!-- PAGE 1: About Me -->
+        <section class="page" id="about">
+            <article class="card card-process about-card">
+                <h2>Process & Vision</h2>
+                <div class="card-content">
+                    <p><span class="hl">Software Architecture</span><br>Architecting robust, scalable backends and containerized solutions.</p>
+                    <p><span class="hl">Product Ownership</span><br>Expertise in stakeholder management and bridging the gap between business needs and technical execution.</p>
+                    <p><span class="hl">Velocity & Guardrails</span><br>Accelerating development with AI tools like Antigravity while strictly gating quality with tools like SonarQube.</p>
+                </div>
+            </article>
+        </section>
 
-        <div class="slider" id="slider">
-
-            <!-- Col 1 -->
-            <div class="col no-click">
-                <article class="card card-process">
-                    <h2>Process & Vision</h2>
-                    <div class="card-content">
-                        <p><span class="hl">Software Architecture</span><br>Architecting robust, scalable backends and containerized solutions.</p>
-                        <p><span class="hl">Product Ownership</span><br>Expertise in stakeholder management and bridging the gap between business needs and technical execution.</p>
-                        <p><span class="hl">Velocity & Guardrails</span><br>Accelerating development with AI tools like Antigravity while strictly gating quality with tools like SonarQube.</p>
-                    </div>
-                </article>
-            </div>
+        <!-- PAGE 2: Portfolio -->
+        <section class="page slider-page" id="portfolio">
+            <div class="slider-wrapper">
+                <button class="hit-area left" onclick="scrollSlider(-1, event)" aria-label="Scroll Left" type="button">
+                    <div class="hit-overlay"><<</div>
+                </button>
+                <button class="hit-area right" onclick="scrollSlider(1, event)" aria-label="Scroll Right" type="button">
+                    <div class="hit-overlay">>></div>
+                </button>
+                <div class="slider" id="slider">
 
             <!-- Col 2: The Project -->
             <div class="col">
@@ -75,6 +77,8 @@
                 <div class="end-text">END_OF_LINE</div>
             </div>
         </div>
+        </div>
+        </section>
     </main>
 
     <script src="script.js"></script>

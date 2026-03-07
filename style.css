@@ -111,11 +111,47 @@ h1 {
     padding-left: 10px;
 }
 
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    height: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#about {
+    padding: 3.5rem;
+    justify-content: flex-start;
+}
+
+.about-card {
+    max-width: 600px;
+    margin-top: -2rem; /* visually nudge up */
+}
+
 /* SLIDER WITH SNAP */
+.slider-page {
+    display: block; /* override flex from .page */
+}
+
 .slider-wrapper { 
-    flex: 1; 
     position: relative; 
     overflow: hidden; 
+    height: 100%;
+    width: 100%;
 }
 
 .slider { 

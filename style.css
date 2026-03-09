@@ -133,34 +133,36 @@ h1 {
 }
 
 #about {
-    padding: 3.5rem;
+    padding: 0;
 }
 
-.about-grid {
-    display: flex;
-    gap: 3rem;
-    width: 100%;
-    height: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+@media (min-width: 1025px) {
+    .about-slider {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(10, 1fr);
+        gap: 3rem;
+        padding: 3.5rem;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        overflow: visible;
+        scroll-snap-type: none;
+    }
+    
+    .about-col {
+        width: auto;
+        scroll-snap-align: none;
+    }
 
-.about-col {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
-
-/* Offset Logic: 60/40 heights */
-.about-col:first-child .card-tall,
-.about-col:last-child .card-tall {
-    flex: 6.5;
-}
-
-.about-col:first-child .card-short,
-.about-col:last-child .card-short {
-    flex: 3.5;
+    .about-item-1 { grid-column: 1; grid-row: 1 / 7; }
+    .about-item-2 { grid-column: 1; grid-row: 7 / 11; }
+    .about-item-3 { grid-column: 2; grid-row: 1 / 5; }
+    .about-item-4 { grid-column: 2; grid-row: 5 / 11; }
+    
+    .about-slider .card {
+        height: 100%;
+    }
 }
 
 .about-card-title {
@@ -471,8 +473,6 @@ p {
     pointer-events: none; /* Disables all hover/click events */
 }
 
-
-
 .card-concept { background: transparent; box-shadow: 8px 8px 0 var(--gy-l); }
 .text-concept { border-color: var(--gy-m); }
 .h2-concept { color: var(--gy-m); border-color: var(--gy-m); }
@@ -491,6 +491,9 @@ p {
 @media (max-width: 1024px) {
     .page-indicator {
         left: 0;
+    }
+    .page-indicator.top {
+        top: 108px; /* Appx header height on tablet */
     }
     body {
         flex-direction: column;
@@ -628,6 +631,9 @@ p {
 }
 
 @media (max-width: 600px) {
+    .page-indicator.top {
+        top: 90px; /* Appx header height on smaller mobile */
+    }
     header {
         padding: 1.5rem 1rem;
     }
@@ -653,15 +659,7 @@ p {
     .card {
         padding: 1rem;
     }
-    .about-grid {
-        flex-direction: column;
-        height: auto;
-    }
     .about-col {
-        height: auto;
-    }
-    .about-col .card {
-        flex: none !important;
-        min-height: auto;
+        min-height: 420px;
     }
 }

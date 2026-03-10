@@ -13,12 +13,7 @@ function scrollSlider(direction, evt) {
 
 // Click to Focus logic
 globalThis.focusCol = function(element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-}
-
-// Click to Focus logic
-globalThis.focusCol = function(element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
 }
 
 // Initialize column listeners

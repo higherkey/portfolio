@@ -136,42 +136,16 @@ h1 {
     padding: 0;
 }
 
-@media (min-width: 1025px) {
-    .about-slider {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(10, 1fr);
-        gap: 3rem;
-        padding: 3.5rem;
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        overflow: visible;
-        scroll-snap-type: none;
-    }
-    
-    .about-col {
-        width: auto;
-        scroll-snap-align: none;
-    }
 
-    .about-item-1 { grid-column: 1; grid-row: 1 / 7; }
-    .about-item-2 { grid-column: 1; grid-row: 7 / 11; }
-    .about-item-3 { grid-column: 2; grid-row: 1 / 5; }
-    .about-item-4 { grid-column: 2; grid-row: 5 / 11; }
-    
-    .about-slider .card {
-        height: 100%;
-    }
-}
-
-.about-card-title {
+h3.about-card-title {
     color: var(--ac);
     font-size: 1.1rem;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
     display: block;
+    border-bottom: none; /* override default h3 styling */
 }
 
 .about-list {
@@ -181,7 +155,8 @@ h1 {
 }
 
 .about-list li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
     position: relative;
     padding-left: 1.5rem;
 }
@@ -193,11 +168,12 @@ h1 {
     color: var(--ac);
 }
 
+/* Tighten typography specifically for About layout */
+.about-slider .card { padding: 1.8rem; }
+.about-slider p { font-size: 1.05rem; margin-bottom: 1rem; line-height: 1.4; }
+
 /* VERTICAL PAGE INDICATORS */
 .page-indicator {
-    position: fixed;
-    left: 400px; /* Header width */
-    right: 0;
     z-index: 100;
     display: flex;
     justify-content: center;
@@ -221,11 +197,17 @@ h1 {
     pointer-events: none;
 }
 .page-indicator.top {
+    position: sticky;
     top: 0;
+    width: 100%;
+    margin-bottom: -3.5rem; /* Float over content */
     background: linear-gradient(to bottom, rgba(255, 51, 0, 0.15), transparent);
 }
 .page-indicator.bottom {
+    position: fixed;
     bottom: 0;
+    left: 400px;
+    right: 0;
     background: linear-gradient(to top, rgba(255, 51, 0, 0.15), transparent);
 }
 
@@ -352,14 +334,16 @@ h1 {
     transition: 0.2s;
 }
 
-.col:hover .card:not(.card-process) { 
-    transform: translate(-4px, -4px); 
-    box-shadow: 12px 12px 0 var(--fg); 
-    border-color: var(--ac); 
-}
+@media (hover: hover) and (pointer: fine) {
+    .col:hover .card:not(.card-process) { 
+        transform: translate(-4px, -4px); 
+        box-shadow: 12px 12px 0 var(--fg); 
+        border-color: var(--ac); 
+    }
 
-.col:hover {
-    border-color: var(--fg);
+    .col:hover {
+        border-color: var(--fg);
+    }
 }
 
 .combo-col { gap: 2rem; }
@@ -459,7 +443,9 @@ p {
 /* CARDS / INLINE STYLE REPLACEMENTS */
 .card-content { margin-top: 1rem; }
 .card-artifact { box-shadow: 8px 8px 0 var(--ac); }
-.col:hover .card-artifact { box-shadow: 12px 12px 0 var(--ac); }
+@media (hover: hover) and (pointer: fine) {
+    .col:hover .card-artifact { box-shadow: 12px 12px 0 var(--ac); }
+}
 
 .h2-active { color: var(--ac); border-color: var(--ac); }
 .project-actions { margin-top: auto; display: flex; flex-direction: column; gap: 0.5rem; }
@@ -487,20 +473,86 @@ p {
     display: none;
 }
 
+/* DESKTOP RESPONSIVE EXTENSIONS */
+@media (min-width: 1025px) {
+    .about-slider {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(10, 1fr);
+        gap: 3rem;
+        padding: 4rem 3.5rem;
+        width: 100%;
+        max-width: 1400px;
+        max-height: 800px; /* Constrain max height so columns don't stretch forever */
+        align-content: center;
+        margin: auto;
+        overflow: visible;
+        scroll-snap-type: none;
+        box-sizing: border-box;
+    }
+    
+    .about-col {
+        width: auto;
+        scroll-snap-align: none;
+        cursor: default; /* Disable pointer cursor on desktop About cards */
+    }
+
+    .about-item-1 { grid-column: 1; grid-row: 1 / 7; }
+    .about-item-2 { grid-column: 1; grid-row: 7 / 11; }
+    .about-item-3 { grid-column: 2; grid-row: 1 / 5; }
+    .about-item-4 { grid-column: 2; grid-row: 5 / 11; }
+    
+    .about-slider .card {
+        height: 100%;
+    }
+}
+
+/* MID-SIZE DESKTOP (Laptops, smaller monitors) */
+@media (max-width: 1600px) and (min-width: 1025px) {
+    header {
+        width: 340px; /* Reduced by 15% from 400px */
+        padding: 2.5rem;
+    }
+    h1 {
+        font-size: 4rem; /* Scaled down proportionally */
+    }
+    .roles {
+        font-size: 1.3rem;
+    }
+    .page-indicator.bottom {
+        left: 340px; /* Match new header width */
+    }
+    .about-slider {
+        padding: 3rem 1.5rem 5rem 1.5rem; /* Tighter side margins, extra bottom padding to clear the PORTFOLIO indicator */
+        gap: 2rem; /* Less gap space */
+    }
+    
+    /* Slight typography adjustments */
+    .about-slider .card { padding: 1.5rem; }
+    .about-slider p { font-size: 1rem; margin-bottom: 1rem; }
+    h3.about-card-title { font-size: 1rem; }
+}
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
-    .page-indicator {
+    .page-indicator.bottom {
         left: 0;
     }
-    .page-indicator.top {
-        top: 108px; /* Appx header height on tablet */
+    
+    /* Clean up page indicators for smaller screens */
+    .indicator-label, .indicator-arrow {
+        display: none;
     }
+    .page-indicator {
+        min-height: 48px;
+    }
+
     body {
         flex-direction: column;
     }
     header {
         width: 100%;
-        padding: 1.5rem 2rem;
+        padding: 2rem; /* Taller on tablet */
         border-right: none;
         border-bottom: none; /* Removed horizontal line */
         align-items: flex-start;
@@ -549,10 +601,11 @@ p {
         width: 100%;
         display: flex;
         flex-direction: column;
-        padding-right: 4rem; /* keep text away from button */
+        padding-right: 4.5rem; /* keep text away from button */
+        box-sizing: border-box; /* Fixes overflow zoom issue */
     }
     h1 {
-        font-size: 2.2rem;
+        font-size: 2.4rem; /* 10% bigger than mobile */
         margin: 0;
     }
     /* Let the name sit on one line on tablets/mobile */
@@ -563,7 +616,7 @@ p {
         content: " "; /* add space when br is hidden */
     }
     .roles {
-        font-size: 1.1rem;
+        font-size: 1.2rem; /* Extrapolated up 10% */
         border-top: none;
         border-bottom: none;
         border-left: 5px solid var(--bg); /* Restored left vertical bar */
@@ -603,13 +656,17 @@ p {
         scroll-padding: 0 1.5rem;
         gap: 1.5rem;
         overflow-y: auto;
+        align-items: center; /* keep cards vertically centered if constrained */
     }
     .hit-area {
         display: none; /* Hide hover arrows on touch devices/smaller screens */
     }
-    .col {
+    .col { 
         width: 80vw;
-        min-height: 420px;
+        max-width: 300px; /* Prevent cards from getting too wide on tablets */
+        min-height: 400px; 
+        max-height: 700px;
+        -webkit-tap-highlight-color: transparent; /* Prevent default touch highlight */
     }
     .card {
         padding: 1.2rem;
@@ -631,11 +688,8 @@ p {
 }
 
 @media (max-width: 600px) {
-    .page-indicator.top {
-        top: 90px; /* Appx header height on smaller mobile */
-    }
     header {
-        padding: 1.5rem 1rem;
+        padding: 1.25rem;
     }
     .mobile-nav-btn {
         top: 1.5rem;

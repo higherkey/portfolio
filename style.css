@@ -102,6 +102,16 @@ h1 {
     margin: 0 0 1rem 0; 
     text-transform: uppercase; 
     letter-spacing: -2px;
+    position: relative;
+    width: fit-content;
+}
+
+.corner-logo {
+    position: absolute;
+    top: 0.05em;
+    right: 0;
+    width: 0.9em;
+    height: 0.9em;
 }
 
 .roles { 
@@ -608,6 +618,14 @@ p {
         font-size: 2.4rem; /* 10% bigger than mobile */
         margin: 0;
     }
+    .corner-logo {
+        position: static;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 0.2em;
+        margin-right: 0.1em;
+        margin-bottom: 0.15em;
+    }
     /* Let the name sit on one line on tablets/mobile */
     h1 br {
         display: none;
@@ -715,5 +733,15 @@ p {
     }
     .about-col {
         min-height: 420px;
+    }
+}
+
+@media (max-width: 345px) {
+    .corner-logo {
+        position: static;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 1em;
+        margin-bottom: 0.15em;
     }
 }

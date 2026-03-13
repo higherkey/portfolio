@@ -556,10 +556,18 @@ p {
     .page-indicator {
         min-height: 48px;
     }
+    .page-indicator.top {
+        margin-bottom: -48px; /* Perfectly offset min-height to prevent document shift */
+    }
 
     body {
         flex-direction: column;
     }
+    
+    .page {
+        align-items: stretch; /* Forces scrollbar to absolute bottom edge */
+    }
+
     header {
         width: 100%;
         padding: 2rem; /* Taller on tablet */
@@ -670,10 +678,10 @@ p {
         opacity: 0.6;
     }
     .slider {
-        padding: 1.5rem;
+        padding: 1rem 1.5rem; /* Tighter vertical padding */
         scroll-padding: 0 1.5rem;
         gap: 1.5rem;
-        overflow-y: auto;
+        overflow-y: hidden;
         align-items: center; /* keep cards vertically centered if constrained */
     }
     .hit-area {
@@ -682,6 +690,7 @@ p {
     .col { 
         width: 80vw;
         max-width: 300px; /* Prevent cards from getting too wide on tablets */
+        height: 100%;
         min-height: 400px; 
         max-height: 700px;
         -webkit-tap-highlight-color: transparent; /* Prevent default touch highlight */
@@ -723,7 +732,7 @@ p {
         font-size: 0.95rem;
     }
     .slider {
-        padding: 1rem;
+        padding: 0.5rem 1rem; /* Much tighter on mobile */
         scroll-padding: 0 1rem;
         gap: 1rem;
     }

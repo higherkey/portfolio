@@ -59,22 +59,39 @@ function updateVerticalArrows() {
     const bottomIndicator = document.querySelector('.page-indicator.bottom');
     if (!mainContent || !topIndicator || !bottomIndicator) return;
 
-    // Allow a small 5px buffer
-    if (mainContent.scrollTop <= 5) {
+    // If exactly at the top, hide top indicator and show bottom
+    if (mainContent.scrollTop <= 1) {
         topIndicator.classList.add('hidden');
-    } else {
-        topIndicator.classList.remove('hidden');
-    }
-    
-    if (mainContent.scrollTop >= mainContent.scrollHeight - mainContent.clientHeight - 5) {
-        bottomIndicator.classList.add('hidden');
-    } else {
+        topIndicator.classList.remove('fade-pulse-top');
         bottomIndicator.classList.remove('hidden');
+    } 
+    // If exactly at the bottom, show top indicator and hide bottom
+    else if (mainContent.scrollTop >= mainContent.scrollHeight - mainContent.clientHeight - 1) {
+        topIndicator.classList.remove('hidden');
+        bottomIndicator.classList.add('hidden');
+        bottomIndicator.classList.remove('fade-pulse-bottom');
+    }
+    // If scrolling anywhere in between, hide BOTH instantly
+    else {
+        topIndicator.classList.add('hidden');
+        topIndicator.classList.remove('fade-pulse-top');
+        bottomIndicator.classList.add('hidden');
+        bottomIndicator.classList.remove('fade-pulse-bottom');
     }
 }
 
 if (mainContent) {
     mainContent.addEventListener('scroll', updateVerticalArrows);
     window.addEventListener('resize', updateVerticalArrows);
-    setTimeout(updateVerticalArrows, 100);
+    setTimeout(() => {
+        updateVerticalArrows();
+        const topIndicator = document.querySelector('.page-indicator.top');
+        const bottomIndicator = document.querySelector('.page-indicator.bottom');
+        if (topIndicator && !topIndicator.classList.contains('hidden')) {
+            topIndicator.classList.add('fade-pulse-top');
+        }
+        if (bottomIndicator && !bottomIndicator.classList.contains('hidden')) {
+            bottomIndicator.classList.add('fade-pulse-bottom');
+        }
+    }, 50);
 }

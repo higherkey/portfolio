@@ -147,15 +147,15 @@ h1 {
 }
 
 
-h3.about-card-title {
+.about-card-title {
     color: var(--ac);
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: bold;
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 0.8rem;
     display: block;
-    border-bottom: none; /* override default h3 styling */
+    border-bottom: none; /* override default h2 styling on desktop */
 }
 
 .about-list {
@@ -195,7 +195,7 @@ h3.about-card-title {
     font-size: 1.2rem;
     font-family: 'Arial Black', sans-serif;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: opacity 0.4s ease, background 0.3s ease, color 0.3s ease;
     user-select: none;
 }
 .page-indicator:hover {
@@ -205,6 +205,41 @@ h3.about-card-title {
 .page-indicator.hidden {
     opacity: 0;
     pointer-events: none;
+    transition: opacity 0s; /* Disappear instantly, but allow fade-in when active */
+}
+
+/* Pseudo-element to hold the intense gradient for smooth fading */
+.page-indicator::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0; /* Hidden by default */
+}
+.page-indicator.top::before {
+    background: linear-gradient(to bottom, rgba(255, 51, 0, 0.45), transparent);
+}
+.page-indicator.bottom::before {
+    background: linear-gradient(to top, rgba(255, 51, 0, 0.45), transparent);
+}
+
+.fade-pulse-top, .fade-pulse-bottom {
+    animation: indicatorFadeIn 1.6s ease-out;
+}
+.fade-pulse-top::before, .fade-pulse-bottom::before {
+    animation: indicatorPulse 1.6s ease-out;
+}
+
+@keyframes indicatorFadeIn {
+    0% { opacity: 0; }
+    40% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes indicatorPulse {
+    0% { opacity: 0; }
+    40% { opacity: 1; }
+    100% { opacity: 0; }
 }
 .page-indicator.top {
     position: sticky;
@@ -319,7 +354,7 @@ h3.about-card-title {
 
 /* CARDS */
 .col { 
-    width: 415px; 
+    width: 385px; 
     flex-shrink: 0; 
     display: flex; 
     flex-direction: column; 
@@ -451,7 +486,6 @@ p {
 }
 
 /* CARDS / INLINE STYLE REPLACEMENTS */
-.card-content { margin-top: 1rem; }
 .card-artifact { box-shadow: 8px 8px 0 var(--ac); }
 @media (hover: hover) and (pointer: fine) {
     .col:hover .card-artifact { box-shadow: 12px 12px 0 var(--ac); }
@@ -474,8 +508,8 @@ p {
 .h2-concept { color: var(--gy-m); border-color: var(--gy-m); }
 .desc-concept { color: var(--gy-d); }
 
-.col-end { justify-content: center; align-items: center; width: 100px; padding: 2rem; }
-.end-text { transform: rotate(-90deg); font-family: 'Arial Black', sans-serif; font-size: 4rem; color: var(--gy-l); white-space: nowrap; }
+.col-end { justify-content: center; align-items: center; width: calc(50vw - 250px); min-width: 100px; padding: 2rem; box-sizing: border-box; }
+.end-text { transform: rotate(-90deg); font-family: 'Arial Black', sans-serif; font-size: 4rem; color: var(--gy-l); white-space: nowrap; opacity: 0.5; }
 
 .accent-orange { color: var(--ac); }
 
@@ -547,6 +581,8 @@ p {
 @media (max-width: 1024px) {
     .page-indicator.bottom {
         left: 0;
+        bottom: 16px; /* Start above horizontal scrollbar */
+        background: linear-gradient(to top, rgba(255, 51, 0, 0.22), transparent); /* slightly darker on mobile */
     }
     
     /* Clean up page indicators for smaller screens */
@@ -558,6 +594,7 @@ p {
     }
     .page-indicator.top {
         margin-bottom: -48px; /* Perfectly offset min-height to prevent document shift */
+        background: linear-gradient(to bottom, rgba(255, 51, 0, 0.22), transparent); /* slightly darker on mobile */
     }
 
     body {
@@ -695,6 +732,10 @@ p {
         max-height: 700px;
         -webkit-tap-highlight-color: transparent; /* Prevent default touch highlight */
     }
+    .col-end {
+        width: 50vw; /* Center the last card beautifully on mobile without header math */
+        min-width: 150px;
+    }
     .card {
         padding: 1.2rem;
     }
@@ -732,7 +773,7 @@ p {
         font-size: 0.95rem;
     }
     .slider {
-        padding: 0.5rem 1rem; /* Much tighter on mobile */
+        padding: 0.8rem 1rem; /* Slightly reduced horizontal, but enough vertical to clear scrollbars */
         scroll-padding: 0 1rem;
         gap: 1rem;
     }
@@ -742,6 +783,39 @@ p {
     }
     .about-col {
         min-height: 420px;
+    }
+    .btn {
+        padding: 0.5rem;
+        font-size: 0.95rem;
+        margin-top: 0.5rem;
+    }
+    .project-actions {
+        gap: 0.3rem; /* Tighter button stack */
+    }
+    p {
+        font-size: 0.95rem; /* Tighter body text */
+        margin-bottom: 0.5rem;
+    }
+    h2 {
+        font-size: 1.25rem; /* Smaller artifact/about headers */
+        margin-bottom: 0.25rem;
+    }
+    .about-card-title {
+        color: var(--fg);
+        font-size: 1.25rem; /* Match h2 */
+        border-bottom: 4px solid var(--ac);
+        display: inline-block;
+        margin-bottom: 0.25rem; /* Tighter margin */
+    }
+    .about-slider .card {
+        padding: 1rem;
+    }
+    .about-slider p {
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+    }
+    .project-title {
+        font-size: 1.8rem; /* Smaller project title */
     }
 }
 

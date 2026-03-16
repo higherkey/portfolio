@@ -251,7 +251,7 @@ h1 {
 .page-indicator.bottom {
     position: fixed;
     bottom: 0;
-    left: 400px;
+    left: 502px; /* 400px width + 96px padding + 6px border */
     right: 0;
     background: linear-gradient(to top, rgba(255, 51, 0, 0.15), transparent);
 }
@@ -527,7 +527,7 @@ p {
         padding: 4rem 3.5rem;
         width: 100%;
         max-width: 1400px;
-        max-height: 800px; /* Constrain max height so columns don't stretch forever */
+        max-height: 880px; /* Constrain max height so columns don't stretch forever */
         align-content: center;
         margin: auto;
         overflow: visible;
@@ -564,7 +564,7 @@ p {
         font-size: 1.3rem;
     }
     .page-indicator.bottom {
-        left: 340px; /* Match new header width */
+        left: 426px; /* 340px width + 80px padding + 6px border */
     }
     .about-slider {
         padding: 3rem 1.5rem 5rem 1.5rem; /* Tighter side margins, extra bottom padding to clear the PORTFOLIO indicator */
@@ -581,7 +581,8 @@ p {
 @media (max-width: 1024px) {
     .page-indicator.bottom {
         left: 0;
-        bottom: 16px; /* Start above horizontal scrollbar */
+        right: 10px; /* Stop before overlapping the vertical scrollbar */
+        bottom: 10px; /* Match the 10px slider scrollbar height exactly */
         background: linear-gradient(to top, rgba(255, 51, 0, 0.22), transparent); /* slightly darker on mobile */
     }
     
@@ -590,11 +591,44 @@ p {
         display: none;
     }
     .page-indicator {
-        min-height: 48px;
+        min-height: 72px;
     }
     .page-indicator.top {
-        margin-bottom: -48px; /* Perfectly offset min-height to prevent document shift */
+        margin-bottom: -72px; /* Perfectly offset min-height to prevent document shift */
         background: linear-gradient(to bottom, rgba(255, 51, 0, 0.22), transparent); /* slightly darker on mobile */
+    }
+    .page-indicator.top::before {
+        background: linear-gradient(to bottom, rgba(255, 51, 0, 0.75), transparent); /* Darker pulse on mobile */
+    }
+    .page-indicator.bottom::before {
+        background: linear-gradient(to top, rgba(255, 51, 0, 0.75), transparent); /* Darker pulse on mobile */
+    }
+    /* Force visible vertical scrollbar on mobile to show there are rows */
+    .main-content {
+        overflow-y: scroll;
+    }
+    .main-content::-webkit-scrollbar {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 14px;
+        display: block;
+        background-color: var(--bg);
+    }
+    .main-content::-webkit-scrollbar-track {
+        background: var(--bg);
+        border-left: 3px solid var(--fg);
+    }
+    .main-content::-webkit-scrollbar-thumb {
+        background: var(--fg);
+        border: 2px solid var(--bg);
+    }
+
+    /* Make horizontal scrollbar thicker on mobile */
+    .slider::-webkit-scrollbar {
+        height: 14px;
+    }
+    .slider::-webkit-scrollbar-thumb {
+        border: 2px solid var(--bg);
     }
 
     body {

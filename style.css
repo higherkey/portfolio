@@ -499,7 +499,6 @@ p {
     background: transparent;
     color: #111; /* Consistent with your --fg */
     border-color: #111;
-    pointer-events: none; /* Disables all hover/click events */
 }
 
 .card-concept { background: transparent; box-shadow: 8px 8px 0 var(--gy-l); }

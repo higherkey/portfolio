@@ -153,7 +153,6 @@ h1 {
     font-weight: bold;
     text-transform: uppercase;
     margin-top: 0;
-    margin-bottom: 0.8rem;
     display: block;
     border-bottom: none; /* override default h2 styling on desktop */
 }
@@ -541,8 +540,8 @@ p {
         cursor: default; /* Disable pointer cursor on desktop About cards */
     }
 
-    .about-item-1 { grid-column: 1; grid-row: 1 / 7; }
-    .about-item-2 { grid-column: 1; grid-row: 7 / 11; }
+    .about-item-1 { grid-column: 1; grid-row: 1 / 6; }
+    .about-item-2 { grid-column: 1; grid-row: 6 / 11; }
     .about-item-3 { grid-column: 2; grid-row: 1 / 5; }
     .about-item-4 { grid-column: 2; grid-row: 5 / 11; }
     
@@ -839,7 +838,7 @@ p {
         font-size: 1.25rem; /* Match h2 */
         border-bottom: 4px solid var(--ac);
         display: inline-block;
-        margin-bottom: 0.25rem; /* Tighter margin */
+        margin-bottom: 0.25rem;
     }
     .about-slider .card {
         padding: 1rem;

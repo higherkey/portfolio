@@ -171,7 +171,7 @@ h1 {
 }
 
 .about-list li::before {
-    content: '→';
+    content: '➔';
     position: absolute;
     left: 0;
     color: var(--ac);
@@ -420,7 +420,6 @@ p {
     font-size: 3rem; 
     line-height: 1; 
     margin: 1rem 0; 
-    height: 9rem;
     text-transform: uppercase; 
     color: var(--fg);
 }
@@ -506,7 +505,15 @@ p {
 .h2-concept { color: var(--gy-m); border-color: var(--gy-m); }
 .desc-concept { color: var(--gy-d); }
 
-.col-end { justify-content: center; align-items: center; width: calc(50vw - 250px); min-width: 100px; padding: 2rem; box-sizing: border-box; }
+.col-end {
+    justify-content: center;
+    align-items: center;
+    width: calc(50vw - 250px);
+    min-width: 100px;
+    max-width: 350px;
+    padding: 2rem;
+    box-sizing: border-box;
+}
 .end-text { transform: rotate(-90deg); font-family: 'Arial Black', sans-serif; font-size: 4rem; color: var(--gy-l); white-space: nowrap; opacity: 0.5; }
 
 .accent-orange { color: var(--ac); }

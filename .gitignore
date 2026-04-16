@@ -1,2 +1,22 @@
+# Project specific
 /archives
-.vscode
+.vscode/
+
+# OS specific
+.DS_Store
+Thumbs.db
+*.swp
+
+# Build artifacts (if any)
+dist/
+build/
+node_modules/
+.npm/
+.yarn/
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

@@ -2,5 +2,6 @@
     "sonarlint.connectedMode.project": {
         "connectionId": "higherkey",
         "projectKey": "higherkey_portfolio"
-    }
+    },
+    "liveServer.settings.port": 5502
 }

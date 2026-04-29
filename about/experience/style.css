@@ -1,0 +1,23 @@
+.timeline {
+    padding: 4rem;
+    max-width: 1000px;
+}
+.timeline-item {
+    margin-bottom: 4rem;
+    border-left: 6px solid var(--ac);
+    padding-left: 2rem;
+    position: relative;
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background: var(--bg);
+    border: 6px solid var(--ac);
+}
+.year { font-family: 'Arial Black', sans-serif; font-size: 1.5rem; color: var(--ac); }
+.company { font-size: 2rem; font-weight: 900; margin-bottom: 0.5rem; }
+.role { font-size: 1.2rem; font-weight: bold; color: var(--gy-d); margin-bottom: 1rem; }

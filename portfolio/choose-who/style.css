@@ -1,0 +1,64 @@
+/* PROJECT PERSONALITY: Choose Who */
+:root {
+    --proj-accent: #00f2ff; /* Cyan */
+    --proj-bg: #000;
+}
+
+.project-hero {
+    background: var(--proj-bg);
+    color: #fff;
+    padding: 6rem 4rem;
+    border-bottom: 6px solid var(--proj-accent);
+}
+
+.project-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 3rem 4rem;
+    border-bottom: 4px solid var(--fg);
+    background: #fff;
+}
+
+.meta-item h4 { font-family: 'Arial Black', sans-serif; text-transform: uppercase; margin-bottom: 0.5rem; color: var(--fg); }
+.meta-item p { margin: 0; font-weight: bold; }
+
+.content-section {
+    padding: 4rem;
+    max-width: 1000px;
+}
+
+.screenshot-gallery {
+    padding: 4rem;
+    background: #111;
+    border-top: 4px solid var(--proj-accent);
+    border-bottom: 4px solid var(--proj-accent);
+    display: flex;
+    justify-content: center;
+}
+
+.placeholder-box {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: 4px dashed var(--proj-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial Black', sans-serif;
+    color: var(--proj-accent);
+    background: rgba(255,255,255,0.05);
+}
+
+.devblog-section {
+    background: #eee;
+    color: var(--fg);
+    padding: 4rem;
+}
+
+.devblog-section h2 { color: var(--fg); border-bottom: 4px solid var(--proj-accent); width: fit-content; }
+
+.project-nav {
+    padding: 4rem;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amy's Bakes | Isaac Ahlfield Portfolio</title>
+    <meta name="description" content="Case study of Amy's Bakes: A boutique bakery experience with a custom inquiry system and elegant glassmorphism.">
+    <meta name="view-transition" content="same-origin">
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-project-detail">
+    <header>
+        <div class="header-titles">
+            <a href="/" class="logo-link">
+                <h1>ISAAC<img src="/assets/logo2.svg" alt="IA Logo" class="corner-logo"><br>AHLFIELD</h1>
+            </a>
+            <div class="roles">SOFTWARE ENGINEER<br>PRODUCT OWNER</div>
+        </div>
+
+        <button class="sidebar-toggle" aria-label="Toggle Sidebar" onclick="toggleSidebar()" type="button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+
+        <nav class="main-nav" aria-label="Main Navigation">
+            <a href="/" class="nav-item"><span>HOME</span></a>
+            <a href="/about/" class="nav-item"><span>ABOUT</span></a>
+            <a href="/portfolio/" class="nav-item active"><span>PORTFOLIO</span></a>
+        </nav>
+
+        <button class="mobile-nav-btn" aria-label="Toggle Menu" onclick="document.body.classList.toggle('nav-open')" type="button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square">
+                <line x1="12" y1="4" x2="12" y2="20"></line>
+                <line x1="4" y1="12" x2="20" y2="12"></line>
+            </svg>
+        </button>
+
+        <nav class="header-links" aria-label="Social Links">
+            <a href="mailto:isaac.ahlfield@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="EMAIL (opens in a new tab)">EMAIL <span class="link-label">contact</span></a>
+            <a href="https://github.com/higherKey" target="_blank" rel="noopener noreferrer" aria-label="GITHUB (opens in a new tab)">GITHUB <span class="link-label">create</span></a>
+            <a href="https://linkedin.com/in/isaac-ahlfield" target="_blank" rel="noopener noreferrer" aria-label="LINKEDIN (opens in a new tab)">LINKEDIN <span class="link-label">connect</span></a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="project-hero">
+            <h2 class="hero-title" style="color: var(--proj-cream);">AMY'S <br><span style="color: var(--proj-accent); -webkit-text-stroke: 2px var(--proj-accent); color: transparent;">BAKES</span></h2>
+            <p class="hero-lead">An elegant, conversion-focused storefront for a boutique bakery. Featuring a custom inquire-to-order workflow and soft glassmorphism.</p>
+            <div class="hero-actions" style="display: flex; gap: 1rem;">
+                <a href="https://higherkey.github.io/amys-bakes/" target="_blank" rel="noopener noreferrer" class="btn" style="background: var(--proj-accent); color: var(--proj-bg); border-color: var(--proj-accent);">ORDER ONLINE</a>
+                <a href="https://github.com/higherKey/amys-bakes" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: var(--proj-accent); color: var(--proj-accent);">VIEW SOURCE</a>
+            </div>
+        </section>
+
+        <section class="project-meta">
+            <div class="meta-item">
+                <h4>Stack</h4>
+                <p>HTML5, Vanilla CSS, JS</p>
+            </div>
+            <div class="meta-item">
+                <h4>Goal</h4>
+                <p>Boutique E-commerce UX</p>
+            </div>
+            <div class="meta-item">
+                <h4>Design</h4>
+                <p>Glassmorphism / Pastel</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">ELEGANT <span style="color: var(--proj-accent)">CONVERSION</span></h2>
+            <p>Selling custom bakes requires a balance between appetizing photography and a streamlined inquiry process. I implemented a 'Custom Bag' system that allows customers to build their order without the friction of a traditional checkout, optimizing for high-touch boutique sales.</p>
+        </section>
+
+        <section class="screenshot-gallery">
+            <div class="placeholder-box">
+                [ ARTISAN BAKERY STOREFRONT SCREENSHOT ]
+            </div>
+        </section>
+
+        <section class="devblog-section">
+            <h2 class="section-title">THE <span style="color: #fff;">STRATEGY</span></h2>
+            <p>I focused on **Visual Excellence** for this project. By using HSL-tailored color palettes and subtle micro-animations on the 'Add to Bag' triggers, the site achieves a premium feel that matches the quality of the products.</p>
+            <ul class="about-list" style="color: #fff;">
+                <li>Fluid typography using `clamp()` for responsive harmony.</li>
+                <li>Glassmorphic UI components for modern depth.</li>
+                <li>Zero external CSS frameworks for maximum performance.</li>
+            </ul>
+        </section>
+
+        <nav class="project-nav">
+            <a href="/portfolio/choose-who/" class="btn btn-outline">← PREV PROJECT</a>
+            <a href="/portfolio/" class="btn">BACK TO GRID</a>
+        </nav>
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>

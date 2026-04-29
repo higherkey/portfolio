@@ -3,23 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isaac Ahlfield | Software Engineer & Product Owner</title>
-    <meta name="description" content="Isaac Ahlfield — Software Engineer and Product Owner. Building high-performance technical solutions with a focus on Architectural Velocity and Product Ownership.">
+    <title>Experience | Isaac Ahlfield Portfolio</title>
+    <meta name="description" content="Professional history and technical leadership timeline for Isaac Ahlfield.">
     <meta name="view-transition" content="same-origin">
     <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
     <link rel="stylesheet" href="/style.css">
-    <script type="speculationrules">
-    {
-      "prerender": [
-        {
-          "source": "list",
-          "urls": ["/about/", "/portfolio/"]
-        }
-      ]
-    }
-    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="page-home">
+<body class="page-about-detail">
     <header>
         <div class="header-titles">
             <a href="/" class="logo-link">
@@ -37,8 +28,8 @@
         </button>
 
         <nav class="main-nav" aria-label="Main Navigation">
-            <a href="/" class="nav-item active"><span>HOME</span></a>
-            <a href="/about/" class="nav-item"><span>ABOUT</span></a>
+            <a href="/" class="nav-item"><span>HOME</span></a>
+            <a href="/about/" class="nav-item active"><span>ABOUT</span></a>
             <a href="/portfolio/" class="nav-item"><span>PORTFOLIO</span></a>
         </nav>
 
@@ -57,16 +48,36 @@
     </header>
 
     <main class="main-content">
-        <section class="hero-section">
-            <div class="hero-content">
-                <h2 class="hero-title">BUILDING FOR <span class="accent-orange">VELOCITY</span></h2>
-                <p class="hero-lead">I bridge the gap between stakeholder vision and engineering execution, leveraging agentic workflows and technical excellence to ship high-impact products.</p>
-                <div class="hero-actions">
-                    <a href="/portfolio/" class="btn">VIEW ARTIFACTS</a>
-                    <a href="/about/" class="btn btn-outline">LEARN MORE</a>
-                </div>
+        <section class="page-header">
+            <h2 class="section-title">PROFESSIONAL <span class="accent-orange">EVOLUTION</span></h2>
+        </section>
+
+        <section class="timeline">
+            <div class="timeline-item">
+                <div class="year">2019 - 2025</div>
+                <div class="company">UnitedHealth Group</div>
+                <div class="role">Senior Software Engineer</div>
+                <p>Led development of high-scale enterprise applications in the healthcare space. Focused on Angular/Typescript frontends and .NET Core backends. Pioneered internal engineering standards for Architectural Velocity.</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="year">2025</div>
+                <div class="company">T.D. Williamson</div>
+                <div class="role">Full Stack Developer</div>
+                <p>Architected internal tooling for pipeline inspection and data analysis. Optimized database performance and CI/CD workflows for mission-critical industrial applications.</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="year">2023 - Present</div>
+                <div class="company">Board Game Hub</div>
+                <div class="role">Creator & UI Architect</div>
+                <p>Bootstrapped a multiplayer platform from vision to production. Managed full-stack lifecycle including SignalR integration and real-time state management.</p>
             </div>
         </section>
+
+        <nav class="project-nav" style="padding: 4rem;">
+            <a href="/about/" class="btn btn-outline">← BACK TO ABOUT</a>
+        </nav>
     </main>
 
     <script src="/script.js"></script>

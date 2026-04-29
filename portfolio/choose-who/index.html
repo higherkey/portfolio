@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Who | Isaac Ahlfield Portfolio</title>
+    <meta name="description" content="Case study of Choose Who: A premium, touch-first player selector optimized for high-fidelity board game sessions.">
+    <meta name="view-transition" content="same-origin">
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-project-detail">
+    <header>
+        <div class="header-titles">
+            <a href="/" class="logo-link">
+                <h1>ISAAC<img src="/assets/logo2.svg" alt="IA Logo" class="corner-logo"><br>AHLFIELD</h1>
+            </a>
+            <div class="roles">SOFTWARE ENGINEER<br>PRODUCT OWNER</div>
+        </div>
+
+        <button class="sidebar-toggle" aria-label="Toggle Sidebar" onclick="toggleSidebar()" type="button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+
+        <nav class="main-nav" aria-label="Main Navigation">
+            <a href="/" class="nav-item"><span>HOME</span></a>
+            <a href="/about/" class="nav-item"><span>ABOUT</span></a>
+            <a href="/portfolio/" class="nav-item active"><span>PORTFOLIO</span></a>
+        </nav>
+
+        <button class="mobile-nav-btn" aria-label="Toggle Menu" onclick="document.body.classList.toggle('nav-open')" type="button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square">
+                <line x1="12" y1="4" x2="12" y2="20"></line>
+                <line x1="4" y1="12" x2="20" y2="12"></line>
+            </svg>
+        </button>
+
+        <nav class="header-links" aria-label="Social Links">
+            <a href="mailto:isaac.ahlfield@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="EMAIL (opens in a new tab)">EMAIL <span class="link-label">contact</span></a>
+            <a href="https://github.com/higherKey" target="_blank" rel="noopener noreferrer" aria-label="GITHUB (opens in a new tab)">GITHUB <span class="link-label">create</span></a>
+            <a href="https://linkedin.com/in/isaac-ahlfield" target="_blank" rel="noopener noreferrer" aria-label="LINKEDIN (opens in a new tab)">LINKEDIN <span class="link-label">connect</span></a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="project-hero">
+            <h2 class="hero-title" style="color: white;">CHOOSE <br><span style="color: var(--proj-accent); -webkit-text-stroke: 2px var(--proj-accent); color: transparent;">WHO</span></h2>
+            <p class="hero-lead">A tactile, touch-first player selector. Designed for speed, precision, and physical immersion during tabletop sessions.</p>
+            <div class="hero-actions" style="display: flex; gap: 1rem;">
+                <a href="https://higherkey.github.io/choosewho/" target="_blank" rel="noopener noreferrer" class="btn" style="background: var(--proj-accent); color: #000; border-color: var(--proj-accent);">OPEN APPLICATION</a>
+                <a href="https://github.com/higherKey/choosewho" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: var(--proj-accent); color: var(--proj-accent);">VIEW SOURCE</a>
+            </div>
+        </section>
+
+        <section class="project-meta">
+            <div class="meta-item">
+                <h4>Stack</h4>
+                <p>Vanilla JS, CSS Grid, Web Audio API</p>
+            </div>
+            <div class="meta-item">
+                <h4>Focus</h4>
+                <p>UI/UX & Mobile Performance</p>
+            </div>
+            <div class="meta-item">
+                <h4>Release</h4>
+                <p>v2.1 Stable</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">TACTILE <span style="color: var(--proj-accent)">PRECISION</span></h2>
+            <p>The first player is always a point of friction in board gaming. *Choose Who* turns that friction into a moment of tactile delight. Using multi-touch tracking and a physics-inspired selection algorithm, it provides an unbiased, high-energy start to any session.</p>
+        </section>
+
+        <section class="screenshot-gallery">
+            <div class="placeholder-box">
+                [ MOBILE MULTI-TOUCH INTERFACE SCREENSHOT ]
+            </div>
+        </section>
+
+        <section class="devblog-section">
+            <h2 class="section-title">THE <span class="accent-orange">AUDIT</span></h2>
+            <p>For *Choose Who*, the goal was zero dependencies. I built a custom touch-handling engine that supports up to 10 concurrent inputs, using the **Web Audio API** for sub-millisecond sound triggering to match visual state changes.</p>
+            <ul class="about-list">
+                <li>Zero-framework Vanilla JS for instant load times.</li>
+                <li>CSS Grid for perfectly circular responsive hit-areas.</li>
+                <li>Local persistence for tournament score tracking.</li>
+            </ul>
+        </section>
+
+        <nav class="project-nav">
+            <a href="/portfolio/board-game-hub/" class="btn btn-outline">← PREV PROJECT</a>
+            <a href="/portfolio/amys-bakes/" class="btn">NEXT PROJECT →</a>
+        </nav>
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>

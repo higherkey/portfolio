@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Isaac Ahlfield</title>
+    <meta name="description" content="Explore Isaac Ahlfield's portfolio of artifacts, including multiplayer platforms, tactile tools, and AI concepts.">
+    <meta name="view-transition" content="same-origin">
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+    <link rel="stylesheet" href="/style.css">
+    <script type="speculationrules">
+    {
+      "prerender": [
+        {
+          "source": "list",
+          "urls": ["/", "/about/"]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="page-portfolio">
+    <header>
+        <div class="header-titles">
+            <a href="/" class="logo-link">
+                <h1>ISAAC<img src="/assets/logo2.svg" alt="IA Logo" class="corner-logo"><br>AHLFIELD</h1>
+            </a>
+            <div class="roles">SOFTWARE ENGINEER<br>PRODUCT OWNER</div>
+        </div>
+
+        <button class="sidebar-toggle" aria-label="Toggle Sidebar" onclick="toggleSidebar()" type="button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+
+        <nav class="main-nav" aria-label="Main Navigation">
+            <a href="/" class="nav-item"><span>HOME</span></a>
+            <a href="/about/" class="nav-item"><span>ABOUT</span></a>
+            <a href="/portfolio/" class="nav-item active"><span>PORTFOLIO</span></a>
+        </nav>
+
+        <button class="mobile-nav-btn" aria-label="Toggle Menu" onclick="document.body.classList.toggle('nav-open')" type="button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square">
+                <line x1="12" y1="4" x2="12" y2="20"></line>
+                <line x1="4" y1="12" x2="20" y2="12"></line>
+            </svg>
+        </button>
+
+        <nav class="header-links" aria-label="Social Links">
+            <a href="mailto:isaac.ahlfield@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="EMAIL (opens in a new tab)">EMAIL <span class="link-label">contact</span></a>
+            <a href="https://github.com/higherKey" target="_blank" rel="noopener noreferrer" aria-label="GITHUB (opens in a new tab)">GITHUB <span class="link-label">create</span></a>
+            <a href="https://linkedin.com/in/isaac-ahlfield" target="_blank" rel="noopener noreferrer" aria-label="LINKEDIN (opens in a new tab)">LINKEDIN <span class="link-label">connect</span></a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="page-header">
+            <h2 class="section-title">ACTIVE <span class="accent-orange">ARTIFACTS</span></h2>
+        </section>
+
+        <div class="portfolio-grid">
+            <!-- BOARD GAME HUB -->
+            <article class="card portfolio-card project-bgh" id="card-bgh">
+                <div class="card-face card-face-default">
+                    <h3 class="project-title">Board Game <span class="accent-orange">Hub</span></h3>
+                    <p class="card-teaser">Live multiplayer platform powered by SignalR and CI/CD automation.</p>
+                    <span class="expand-hint">CLICK TO PREVIEW</span>
+                </div>
+                <div class="card-face card-face-expanded">
+                    <button class="modal-close" aria-label="Close Preview">×</button>
+                    <h3 class="project-title">Board Game <span class="accent-orange">Hub</span></h3>
+                    <p>A full-velocity engineering artifact. Deployed across Render, Vercel, and Supabase.</p>
+                    <div class="card-actions">
+                        <a href="/portfolio/board-game-hub/" class="btn btn-sm">VIEW PROJECT PAGE</a>
+                        <a href="https://github.com/higherKey/board-game-hub" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">VIEW REPO</a>
+                        <a href="https://board-game-hub-alpha.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">LIVE DEMO</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- CHOOSE WHO -->
+            <article class="card portfolio-card project-choosewho" id="card-choosewho">
+                <div class="card-face card-face-default">
+                    <h3 class="project-title">Choose Who</h3>
+                    <p class="card-teaser">Premium, touch-first player selector for high-fidelity board game sessions.</p>
+                    <span class="expand-hint">CLICK TO PREVIEW</span>
+                </div>
+                <div class="card-face card-face-expanded">
+                    <button class="modal-close" aria-label="Close Preview">×</button>
+                    <h3 class="project-title">Choose Who</h3>
+                    <p>Tactile experience optimization using modern browser APIs and fluid animations.</p>
+                    <div class="card-actions">
+                        <a href="/portfolio/choose-who/" class="btn btn-sm">VIEW PROJECT PAGE</a>
+                        <a href="https://github.com/higherKey/choosewho" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">VIEW REPO</a>
+                        <a href="https://higherkey.github.io/choosewho/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">LIVE DEMO</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- AMY'S BAKES -->
+            <article class="card portfolio-card project-amys" id="card-amys">
+                <div class="card-face card-face-default">
+                    <h3 class="project-title">Amy's Bakes</h3>
+                    <p class="card-teaser">Boutique bakery experience with custom inquiry bag and glassmorphism.</p>
+                    <span class="expand-hint">CLICK TO PREVIEW</span>
+                </div>
+                <div class="card-face card-face-expanded">
+                    <button class="modal-close" aria-label="Close Preview">×</button>
+                    <h3 class="project-title">Amy's Bakes</h3>
+                    <p>Clean, modular architecture focused on high-end aesthetic and conversion optimization.</p>
+                    <div class="card-actions">
+                        <a href="/portfolio/amys-bakes/" class="btn btn-sm">VIEW PROJECT PAGE</a>
+                        <a href="https://github.com/higherKey/amys-bakes" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">VIEW REPO</a>
+                        <a href="https://higherkey.github.io/amys-bakes/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">LIVE DEMO</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ROUTE 66 -->
+            <article class="card portfolio-card project-route66" id="card-route66">
+                <div class="card-face card-face-default">
+                    <h3 class="project-title">Route 66 Passport</h3>
+                    <p class="card-teaser">Digital passport for tracking historic landmarks with neon aesthetics.</p>
+                    <span class="expand-hint">CLICK TO PREVIEW</span>
+                </div>
+                <div class="card-face card-face-expanded">
+                    <button class="modal-close" aria-label="Close Preview">×</button>
+                    <h3 class="project-title">Route 66 Passport</h3>
+                    <p>A location-aware PWA featuring geolocation and custom SVG 'stamp' rewards.</p>
+                    <div class="card-actions">
+                        <a href="/portfolio/route-66-passport/" class="btn btn-sm">VIEW PROJECT PAGE</a>
+                        <a href="https://github.com/higherKey/route-66-passport" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">VIEW REPO</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <div class="overlay-backdrop"></div>
+    <script src="/script.js"></script>
+</body>
+</html>

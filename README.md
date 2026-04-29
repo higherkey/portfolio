@@ -27,10 +27,13 @@ Welcome to my professional portfolio. This repository hosts the source code for 
 
 ## 🛠️ Technical Arsenal
 
-- **Frontend**: React, Svelte 5, Next.js, Blazor WASM, Vanilla JS.
+The projects featured in this portfolio demonstrate proficiency across a modern, full-stack engineering spectrum:
+
+- **Frontend Frameworks**: Angular (v21+), React, Svelte 5, Next.js, Blazor WASM.
+- **Languages & Logic**: TypeScript, JavaScript (ES6+), C# / .NET.
 - **Styling**: Modern CSS (Variables, Grid, Flexbox), Tailwind CSS, Framer Motion.
-- **Graphics & Physics**: Matter.js, Three.js, Canvas API.
-- **DevOps**: GitHub Actions (CI/CD), GitHub Pages, Vercel.
+- **Graphics & Physics**: Mapbox GL JS, Matter.js, Three.js, Canvas API.
+- **Backend & Cloud**: ASP.NET Core, Colyseus (WebSockets), Vercel, GitHub Pages.
 
 ---
 

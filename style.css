@@ -83,8 +83,18 @@ body.sidebar-collapsed .nav-item {
     border-radius: 0;
 }
 
-body.sidebar-collapsed .nav-item span {
-    display: none; /* We'll need to wrap nav text in <span> tags */
+body.sidebar-collapsed .nav-item span,
+body.sidebar-collapsed .text-part,
+body.sidebar-collapsed br {
+    display: none;
+}
+
+body.sidebar-collapsed .corner-logo {
+    position: static;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: block;
+    margin: 0 auto;
 }
 
 body.sidebar-collapsed .roles,
@@ -194,6 +204,14 @@ h1 {
     background: var(--bg);
     color: var(--ac);
     box-shadow: 4px 4px 0 var(--fg);
+}
+
+.nav-icon {
+    display: none;
+}
+
+body.sidebar-collapsed .nav-icon {
+    display: block;
 }
 
 .header-links {
@@ -456,6 +474,16 @@ p { font-size: 1.1rem; line-height: 1.5; margin-bottom: 1rem; }
 .btn-outline { background: transparent; color: var(--fg); }
 .btn-outline:hover { color: var(--bg); }
 .btn-sm { padding: 0.75rem 1.5rem; font-size: 0.9rem; }
+
+.card-meta {
+    margin-top: auto;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+    color: var(--gy-d);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
 /* ========================
    MOBILE RESPONSIVE

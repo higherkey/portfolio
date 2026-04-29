@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board Game Hub | Isaac Ahlfield Portfolio</title>
-    <meta name="description" content="Case study of Board Game Hub: A full-stack multiplayer platform built with SignalR, Supabase, and CI/CD automation.">
+    <title>Route 66 Passport | Isaac Ahlfield Portfolio</title>
+    <meta name="description" content="Case study of Route 66 Passport: A digital passport for tracking historic landmarks with neon aesthetics.">
     <meta name="view-transition" content="same-origin">
     <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
     <link rel="stylesheet" href="/style.css">
@@ -49,57 +49,51 @@
 
     <main class="main-content">
         <section class="project-hero">
-            <h2 class="hero-title" style="color: var(--proj-accent);">BOARD GAME <br><span style="color: var(--proj-accent); -webkit-text-stroke: 2px var(--proj-accent); color: transparent;">HUB</span></h2>
-            <p class="hero-lead">The central nervous system for hobbyist board gaming. Live multiplayer, stat tracking, and lobby management.</p>
+            <h2 class="hero-title" style="color: var(--proj-accent);">ROUTE 66 <br><span style="color: var(--proj-accent); -webkit-text-stroke: 2px var(--proj-accent); color: transparent;">PASSPORT</span></h2>
+            <p class="hero-lead">A digital companion for the Mother Road. Track your journey through historic landmarks with geolocation and custom rewards.</p>
             <div class="hero-actions" style="display: flex; gap: 1rem;">
-                <a href="https://board-game-hub-alpha.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn" style="background: var(--proj-accent); color: var(--proj-bg); border-color: var(--proj-accent);">VISIT LIVE SITE</a>
-                <a href="https://github.com/higherKey/board-game-hub" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: var(--proj-accent); color: var(--proj-accent);">VIEW SOURCE</a>
+                <a href="https://github.com/higherkey/route-66-passport" target="_blank" rel="noopener noreferrer" class="btn" style="background: var(--proj-accent); color: #fff; border-color: var(--proj-accent);">VIEW SOURCE</a>
             </div>
         </section>
 
         <section class="project-meta">
             <div class="meta-item">
                 <h4>Stack</h4>
-                <p>SignalR, Angular, .NET Core, Supabase</p>
+                <p>PWA, Geolocation API, SVG, Vanilla CSS</p>
             </div>
             <div class="meta-item">
                 <h4>Role</h4>
-                <p>Lead Engineer & UI Architect</p>
+                <p>Lead Developer & Creative Lead</p>
             </div>
             <div class="meta-item">
-                <h4>Timeline</h4>
-                <p>2023 - Ongoing</p>
+                <h4>Status</h4>
+                <p>Concept Artifact</p>
             </div>
         </section>
 
         <section class="content-section">
-            <h2 class="section-title">THE <span style="color: var(--proj-accent)">CHALLENGE</span></h2>
-            <p>Hobbyist board games like *Catan* or *Terraforming Mars* often lack a unified digital companion that handles the "boring" parts of gaming: keeping score, finding groups, and tracking long-term win rates. The goal was to build a platform that feels like an extension of the physical board game, not a replacement for it.</p>
+            <h2 class="section-title">THE <span style="color: var(--proj-accent)">JOURNEY</span></h2>
+            <p>Route 66 Passport was designed to bring the traditional 'stamp book' experience into the digital age. By using the browser's Geolocation API, users can 'check in' at designated landmarks and unlock unique, neon-styled SVG stamps.</p>
         </section>
 
         <section class="screenshot-gallery">
             <div class="placeholder-box">
-                [ REAL-TIME LOBBY DASHBOARD SCREENSHOT ]
+                [ NEON STAMP INTERFACE PREVIEW ]
             </div>
         </section>
 
         <section class="devblog-section">
-            <h2 class="section-title">DEV<span class="accent-orange">BLOG</span></h2>
-            <p>Building for **Architectural Velocity** meant automating everything. I established a pipeline where every commit to `main` triggers a multi-stage deployment:</p>
-            <ul class="about-list" style="color: #fff;">
-                <li>Backend (C#) deploys to Render via Docker containers.</li>
-                <li>Frontend (Angular) deploys to Vercel for edge delivery.</li>
-                <li>Database migrations are handled automatically through Supabase CLI.</li>
-            </ul>
-            <p>The real technical challenge was the real-time lobby system. By using SignalR hubs, I reduced state-sync latency to under 50ms, ensuring that when a player joins a lobby, everyone else sees them instantly.</p>
+            <h2 class="section-title">RETRO <span class="accent-orange">FUTURE</span></h2>
+            <p>The design system, 'Neon Americana', blends 1950s diner aesthetics with modern high-fidelity digital interfaces. We use CSS variables to create a flickering neon effect and deep, atmospheric backgrounds.</p>
         </section>
 
         <nav class="project-nav">
-            <a href="/portfolio/" class="btn btn-outline">← BACK TO GRID</a>
-            <a href="/portfolio/choose-who/" class="btn">NEXT PROJECT →</a>
+            <a href="/portfolio/kids-games/" class="btn btn-outline">← PREV PROJECT</a>
+            <a href="/portfolio/" class="btn">BACK TO GRID</a>
         </nav>
     </main>
 
+    <div class="overlay-backdrop"></div>
     <script src="/script.js"></script>
 </body>
 </html>

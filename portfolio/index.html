@@ -23,7 +23,7 @@
     <header>
         <div class="header-titles">
             <a href="/" class="logo-link">
-                <h1><span class="text-part">ISAAC</span><img src="/assets/logo2.svg" alt="IA Logo" class="corner-logo"><br><span class="text-part">AHLFIELD</span></h1>
+                <h1>ISAAC<img src="/assets/logo2.svg" alt="IA Logo" class="corner-logo"><br>AHLFIELD</h1>
             </a>
             <div class="roles">SOFTWARE ENGINEER<br>PRODUCT OWNER</div>
         </div>
@@ -37,18 +37,9 @@
         </button>
 
         <nav class="main-nav" aria-label="Main Navigation">
-            <a href="/" class="nav-item">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="inherit" class="nav-icon"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                <span>HOME</span>
-            </a>
-            <a href="/about/" class="nav-item">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="inherit" class="nav-icon"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-                <span>ABOUT</span>
-            </a>
-            <a href="/portfolio/" class="nav-item active">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="inherit" class="nav-icon"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-                <span>PORTFOLIO</span>
-            </a>
+            <a href="/" class="nav-item"><span>HOME</span></a>
+            <a href="/about/" class="nav-item"><span>ABOUT</span></a>
+            <a href="/portfolio/" class="nav-item active"><span>PORTFOLIO</span></a>
         </nav>
 
         <button class="mobile-nav-btn" aria-label="Toggle Menu" onclick="document.body.classList.toggle('nav-open')" type="button">
@@ -81,12 +72,9 @@
                 <div class="card-face card-face-expanded">
                     <button class="modal-close" aria-label="Close Preview">×</button>
                     <h3 class="project-title">Board Game <span class="accent-orange">Hub</span></h3>
-                    <p>A full-velocity engineering artifact. Built entirely as a solo developer leveraging AI tools. Deployed across Render, Vercel, and Supabase via a full CI/CD pipeline. Reduced state-sync latency to under 50ms using SignalR hubs.</p>
-                    <div class="card-meta">
-                        <strong>STACK:</strong> SignalR, Angular, .NET Core, Supabase
-                    </div>
+                    <p>A full-velocity engineering artifact. Deployed across Render, Vercel, and Supabase.</p>
                     <div class="card-actions">
-                        <a href="board-game-hub/" class="btn btn-sm">VIEW PROJECT PAGE</a>
+                        <a href="/portfolio/board-game-hub/" class="btn btn-sm">VIEW PROJECT PAGE</a>
                         <a href="https://github.com/higherKey/board-game-hub" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">VIEW REPO</a>
                         <a href="https://board-game-hub-alpha.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">LIVE DEMO</a>
                     </div>
@@ -103,13 +91,10 @@
                 <div class="card-face card-face-expanded">
                     <button class="modal-close" aria-label="Close Preview">×</button>
                     <h3 class="project-title">Choose Who</h3>
-                    <p>Tactile experience optimization using modern browser APIs and fluid animations. Delivers a high-fidelity experience through optimized animations and zero-latency response feedback.</p>
-                    <div class="card-meta">
-                        <strong>STACK:</strong> Vanilla JS, Canvas API, Pointer Events
-                    </div>
+                    <p>Tactile experience optimization using modern browser APIs and fluid animations.</p>
                     <div class="card-actions">
-                        <a href="choose-who/" class="btn btn-sm">VIEW PROJECT PAGE</a>
-                        <a href="https://github.com/higherkey/choosewho" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">VIEW REPO</a>
+                        <a href="/portfolio/choose-who/" class="btn btn-sm">VIEW PROJECT PAGE</a>
+                        <a href="https://github.com/higherKey/choosewho" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">VIEW REPO</a>
                         <a href="https://higherkey.github.io/choosewho/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">LIVE DEMO</a>
                     </div>
                 </div>
@@ -119,17 +104,15 @@
             <article class="card portfolio-card project-reactor" id="card-reactor">
                 <div class="card-face card-face-default">
                     <h3 class="project-title">Project Reactor</h3>
-                    <p class="card-teaser">High-speed, 4-player local multiplayer reaction game built with Svelte 5.</p>
+                    <p class="card-teaser">High-speed local multiplayer reaction game built with Svelte 5.</p>
                     <span class="expand-hint">CLICK TO PREVIEW</span>
                 </div>
                 <div class="card-face card-face-expanded">
                     <button class="modal-close" aria-label="Close Preview">×</button>
                     <h3 class="project-title">Project Reactor</h3>
-                    <p>Powered by Svelte 5 Runes and a "Neon Glass" aesthetic. Optimized for sub-16ms response feedback on tablets and touch devices. Features 15+ high-speed game modes.</p>
-                    <div class="card-meta">
-                        <strong>STACK:</strong> Svelte 5, SvelteKit, Vanilla CSS
-                    </div>
+                    <p>4-player cognitive challenges with sub-16ms response feedback and a "Neon Glass" aesthetic.</p>
                     <div class="card-actions">
+                        <a href="/portfolio/project-reactor/" class="btn btn-sm">VIEW PROJECT PAGE</a>
                         <a href="https://github.com/higherkey/project-reactor" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">VIEW REPO</a>
                         <a href="https://higherkey.github.io/project-reactor/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">LIVE DEMO</a>
                     </div>
@@ -152,13 +135,10 @@
                 <div class="card-face card-face-expanded">
                     <button class="modal-close" aria-label="Close Preview">×</button>
                     <h3 class="project-title">Amy's Bakes</h3>
-                    <p>Clean bakery shopping experience featuring a custom "Inquiry Bag" system, glassmorphism, and responsive modular architecture. Built for high-end aesthetic and SEO optimization.</p>
-                    <div class="card-meta">
-                        <strong>STACK:</strong> Semantic HTML5, Vanilla JavaScript (ES6+), CSS3
-                    </div>
+                    <p>Clean, modular architecture focused on high-end aesthetic and conversion optimization.</p>
                     <div class="card-actions">
-                        <a href="amys-bakes/" class="btn btn-sm">VIEW PROJECT PAGE</a>
-                        <a href="https://github.com/higherkey/amys-bakes" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">VIEW REPO</a>
+                        <a href="/portfolio/amys-bakes/" class="btn btn-sm">VIEW PROJECT PAGE</a>
+                        <a href="https://github.com/higherKey/amys-bakes" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">VIEW REPO</a>
                         <a href="https://higherkey.github.io/amys-bakes/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">LIVE DEMO</a>
                     </div>
                 </div>
@@ -168,17 +148,15 @@
             <article class="card portfolio-card project-brushquest" id="card-brushquest">
                 <div class="card-face card-face-default">
                     <h3 class="project-title">Brush Quest</h3>
-                    <p class="card-teaser">High-performance toothbrushing assistant for children with Rive animations.</p>
+                    <p class="card-teaser">High-performance toothbrushing assistant with interactive characters.</p>
                     <span class="expand-hint">CLICK TO PREVIEW</span>
                 </div>
                 <div class="card-face card-face-expanded">
                     <button class="modal-close" aria-label="Close Preview">×</button>
                     <h3 class="project-title">Brush Quest</h3>
-                    <p>Combines precision timing logic with interactive character animations and zero-latency synthesized audio to build healthy habits. Features custom Rive animations.</p>
-                    <div class="card-meta">
-                        <strong>STACK:</strong> Rive, Vanilla JS, Web Audio API
-                    </div>
+                    <p>Precision timing logic and zero-latency synthesized audio to build healthy habits.</p>
                     <div class="card-actions">
+                        <a href="/portfolio/brush-quest/" class="btn btn-sm">VIEW PROJECT PAGE</a>
                         <a href="https://github.com/higherkey/brushquest" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">VIEW REPO</a>
                         <a href="https://higherkey.github.io/brushquest/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">LIVE DEMO</a>
                     </div>
@@ -189,18 +167,15 @@
             <article class="card portfolio-card project-expresszen" id="card-expresszen">
                 <div class="card-face card-face-default">
                     <h3 class="project-title">Express Zen</h3>
-                    <p class="card-teaser">Regex visualization and testing tool simplifying complex pattern matching.</p>
+                    <p class="card-teaser">Regex visualization and testing tool designed for clarity and education.</p>
                     <span class="expand-hint">CLICK TO PREVIEW</span>
                 </div>
                 <div class="card-face card-face-expanded">
                     <button class="modal-close" aria-label="Close Preview">×</button>
                     <h3 class="project-title">Express Zen</h3>
-                    <p>A regex visualization tool focused on simplifying syntax, leveraging AI, and educating users on complex pattern matching. In active development.</p>
-                    <div class="card-meta">
-                        <strong>STACK:</strong> TypeScript, AI Integration, CSS Grid
-                    </div>
+                    <p>Simplifying complex pattern matching syntax through AI-assisted visualizations.</p>
                     <div class="card-actions">
-                        <a href="express-zen/" class="btn btn-sm">VIEW PROJECT PAGE</a>
+                        <a href="/portfolio/express-zen/" class="btn btn-sm">VIEW PROJECT PAGE</a>
                         <a href="https://github.com/higherKey/ExpressZen" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">VIEW REPO</a>
                         <a href="https://higherkey.github.io/ExpressZen/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">LIVE DEMO</a>
                     </div>
@@ -223,17 +198,15 @@
                 <div class="card-face card-face-expanded">
                     <button class="modal-close" aria-label="Close Preview">×</button>
                     <h3 class="project-title">Kids Games</h3>
-                    <p>Features zero-latency haptic and audio feedback with physics-based puzzles built on Matter.js. Focused on immediate tactile engagement for early learners.</p>
-                    <div class="card-meta">
-                        <strong>STACK:</strong> Matter.js, Web Audio, Pointer Events
-                    </div>
+                    <p>Zero-latency haptic and audio feedback with physics-based puzzles built on Matter.js.</p>
                     <div class="card-actions">
+                        <a href="/portfolio/kids-games/" class="btn btn-sm">VIEW PROJECT PAGE</a>
                         <a href="https://github.com/higherkey/kids-games-site" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">VIEW REPO</a>
                     </div>
                 </div>
             </article>
 
-            <!-- ROUTE 66 -->
+            <!-- ROUTE 66 PASSPORT -->
             <article class="card portfolio-card project-route66" id="card-route66">
                 <div class="card-face card-face-default">
                     <h3 class="project-title">Route 66 Passport</h3>
@@ -243,13 +216,10 @@
                 <div class="card-face card-face-expanded">
                     <button class="modal-close" aria-label="Close Preview">×</button>
                     <h3 class="project-title">Route 66 Passport</h3>
-                    <p>A location-aware PWA featuring geolocation and custom SVG 'stamp' rewards. Tracks progress through landmarks using geolocation and provides a tactile 'stamp' experience.</p>
-                    <div class="card-meta">
-                        <strong>STACK:</strong> Geolocation API, SVG, PWA
-                    </div>
+                    <p>A location-aware PWA featuring geolocation and custom SVG 'stamp' rewards.</p>
                     <div class="card-actions">
-                        <a href="route-66-passport/" class="btn btn-sm">VIEW PROJECT PAGE</a>
-                        <a href="https://github.com/higherKey/route-66-passport" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">VIEW REPO</a>
+                        <a href="/portfolio/route-66-passport/" class="btn btn-sm">VIEW PROJECT PAGE</a>
+                        <a href="https://github.com/higherkey/route-66-passport" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">VIEW REPO</a>
                     </div>
                 </div>
             </article>
@@ -258,18 +228,15 @@
             <article class="card portfolio-card project-airpg" id="card-airpg">
                 <div class="card-face card-face-default">
                     <h3 class="project-title">AI RPG System</h3>
-                    <p class="card-teaser">GM-less, player-driven roleplaying experience where AI manages world states.</p>
+                    <p class="card-teaser">GM-less, player-driven RPG where AI manages the world state.</p>
                     <span class="expand-hint">CLICK TO PREVIEW</span>
                 </div>
                 <div class="card-face card-face-expanded">
                     <button class="modal-close" aria-label="Close Preview">×</button>
                     <h3 class="project-title">AI RPG System</h3>
-                    <p>A GM-less, player-driven roleplaying experience where AI manages environmental reactions and maintains complex world states. Currently in concept phase.</p>
-                    <div class="card-meta">
-                        <strong>STACK:</strong> AI (LLMs), JSON Schema, State Management
-                    </div>
+                    <p>Environmental reactions and complex world states managed by agentic AI.</p>
                     <div class="card-actions">
-                        <a href="ai-rpg-system/" class="btn btn-sm">VIEW PROJECT PAGE</a>
+                        <a href="/portfolio/ai-rpg-system/" class="btn btn-sm">VIEW PROJECT PAGE</a>
                     </div>
                 </div>
             </article>

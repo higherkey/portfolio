@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board Game Hub | Isaac Ahlfield Portfolio</title>
-    <meta name="description" content="Case study of Board Game Hub: A full-stack multiplayer platform built with SignalR, Supabase, and CI/CD automation.">
+    <title>Express Zen | Isaac Ahlfield Portfolio</title>
+    <meta name="description" content="Case study of Express Zen: A regex visualization and testing tool designed for clarity and education.">
     <meta name="view-transition" content="same-origin">
     <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
     <link rel="stylesheet" href="/style.css">
@@ -49,57 +49,52 @@
 
     <main class="main-content">
         <section class="project-hero">
-            <h2 class="hero-title" style="color: var(--proj-accent);">BOARD GAME <br><span style="color: var(--proj-accent); -webkit-text-stroke: 2px var(--proj-accent); color: transparent;">HUB</span></h2>
-            <p class="hero-lead">The central nervous system for hobbyist board gaming. Live multiplayer, stat tracking, and lobby management.</p>
+            <h2 class="hero-title" style="color: var(--proj-accent);">EXPRESS <br><span style="color: var(--proj-accent); -webkit-text-stroke: 2px var(--proj-accent); color: transparent;">ZEN</span></h2>
+            <p class="hero-lead">Visualizing the complex world of Regular Expressions. A tool built to turn pattern matching from a headache into a superpower.</p>
             <div class="hero-actions" style="display: flex; gap: 1rem;">
-                <a href="https://board-game-hub-alpha.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn" style="background: var(--proj-accent); color: var(--proj-bg); border-color: var(--proj-accent);">VISIT LIVE SITE</a>
-                <a href="https://github.com/higherKey/board-game-hub" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: var(--proj-accent); color: var(--proj-accent);">VIEW SOURCE</a>
+                <a href="https://higherkey.github.io/ExpressZen/" target="_blank" rel="noopener noreferrer" class="btn" style="background: var(--proj-accent); color: #fff; border-color: var(--proj-accent);">VISIT LIVE SITE</a>
+                <a href="https://github.com/higherKey/ExpressZen" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: var(--proj-accent); color: var(--proj-accent);">VIEW SOURCE</a>
             </div>
         </section>
 
         <section class="project-meta">
             <div class="meta-item">
                 <h4>Stack</h4>
-                <p>SignalR, Angular, .NET Core, Supabase</p>
+                <p>Svelte 5, AI-assisted Visualization, SVG</p>
             </div>
             <div class="meta-item">
-                <h4>Role</h4>
-                <p>Lead Engineer & UI Architect</p>
+                <h4>Goal</h4>
+                <p>Technical Education & Utility</p>
             </div>
             <div class="meta-item">
-                <h4>Timeline</h4>
-                <p>2023 - Ongoing</p>
+                <h4>Status</h4>
+                <p>WIP Artifact</p>
             </div>
         </section>
 
         <section class="content-section">
-            <h2 class="section-title">THE <span style="color: var(--proj-accent)">CHALLENGE</span></h2>
-            <p>Hobbyist board games like *Catan* or *Terraforming Mars* often lack a unified digital companion that handles the "boring" parts of gaming: keeping score, finding groups, and tracking long-term win rates. The goal was to build a platform that feels like an extension of the physical board game, not a replacement for it.</p>
+            <h2 class="section-title">THE <span style="color: var(--proj-accent)">ZEN</span></h2>
+            <p>Regular Expressions are notoriously difficult to read and maintain. Express Zen uses real-time parsing and AI-driven explanations to break down complex patterns into manageable, visual components.</p>
         </section>
 
         <section class="screenshot-gallery">
             <div class="placeholder-box">
-                [ REAL-TIME LOBBY DASHBOARD SCREENSHOT ]
+                [ REGEX VISUALIZATION DASHBOARD PREVIEW ]
             </div>
         </section>
 
         <section class="devblog-section">
-            <h2 class="section-title">DEV<span class="accent-orange">BLOG</span></h2>
-            <p>Building for **Architectural Velocity** meant automating everything. I established a pipeline where every commit to `main` triggers a multi-stage deployment:</p>
-            <ul class="about-list" style="color: #fff;">
-                <li>Backend (C#) deploys to Render via Docker containers.</li>
-                <li>Frontend (Angular) deploys to Vercel for edge delivery.</li>
-                <li>Database migrations are handled automatically through Supabase CLI.</li>
-            </ul>
-            <p>The real technical challenge was the real-time lobby system. By using SignalR hubs, I reduced state-sync latency to under 50ms, ensuring that when a player joins a lobby, everyone else sees them instantly.</p>
+            <h2 class="section-title">CLEAR <span class="accent-orange">PATTERNS</span></h2>
+            <p>I utilized a recursive decent parser to map regex tokens to SVG nodes. This allows for a hierarchical view of the pattern, making it easy to identify capture groups, quantifiers, and anchors at a glance.</p>
         </section>
 
         <nav class="project-nav">
-            <a href="/portfolio/" class="btn btn-outline">← BACK TO GRID</a>
-            <a href="/portfolio/choose-who/" class="btn">NEXT PROJECT →</a>
+            <a href="/portfolio/brush-quest/" class="btn btn-outline">← PREV PROJECT</a>
+            <a href="/portfolio/" class="btn">BACK TO GRID</a>
         </nav>
     </main>
 
+    <div class="overlay-backdrop"></div>
     <script src="/script.js"></script>
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board Game Hub | Isaac Ahlfield Portfolio</title>
-    <meta name="description" content="Case study of Board Game Hub: A full-stack multiplayer platform built with SignalR, Supabase, and CI/CD automation.">
+    <title>Kids Games | Isaac Ahlfield Portfolio</title>
+    <meta name="description" content="Explore Kids Games: A tactile, educational, and sensory mini-game platform for children.">
     <meta name="view-transition" content="same-origin">
     <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
     <link rel="stylesheet" href="/style.css">
@@ -49,57 +49,51 @@
 
     <main class="main-content">
         <section class="project-hero">
-            <h2 class="hero-title" style="color: var(--proj-accent);">BOARD GAME <br><span style="color: var(--proj-accent); -webkit-text-stroke: 2px var(--proj-accent); color: transparent;">HUB</span></h2>
-            <p class="hero-lead">The central nervous system for hobbyist board gaming. Live multiplayer, stat tracking, and lobby management.</p>
+            <h2 class="hero-title" style="color: var(--proj-accent);">KIDS <br><span style="color: var(--proj-accent); -webkit-text-stroke: 2px var(--proj-accent); color: transparent;">GAMES</span></h2>
+            <p class="hero-lead">Tactile, educational, and sensory mini-game platform for children. Focused on zero-latency feedback and physical interactions.</p>
             <div class="hero-actions" style="display: flex; gap: 1rem;">
-                <a href="https://board-game-hub-alpha.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn" style="background: var(--proj-accent); color: var(--proj-bg); border-color: var(--proj-accent);">VISIT LIVE SITE</a>
-                <a href="https://github.com/higherKey/board-game-hub" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: var(--proj-accent); color: var(--proj-accent);">VIEW SOURCE</a>
+                <a href="https://github.com/higherkey/kids-games-site" target="_blank" rel="noopener noreferrer" class="btn" style="background: var(--proj-accent); color: #fff; border-color: var(--proj-accent);">VIEW SOURCE</a>
             </div>
         </section>
 
         <section class="project-meta">
             <div class="meta-item">
                 <h4>Stack</h4>
-                <p>SignalR, Angular, .NET Core, Supabase</p>
+                <p>Matter.js, Vanilla JS, CSS Variables</p>
             </div>
             <div class="meta-item">
                 <h4>Role</h4>
-                <p>Lead Engineer & UI Architect</p>
+                <p>Architect & Interaction Designer</p>
             </div>
             <div class="meta-item">
-                <h4>Timeline</h4>
-                <p>2023 - Ongoing</p>
+                <h4>Status</h4>
+                <p>Concept Artifact</p>
             </div>
         </section>
 
         <section class="content-section">
-            <h2 class="section-title">THE <span style="color: var(--proj-accent)">CHALLENGE</span></h2>
-            <p>Hobbyist board games like *Catan* or *Terraforming Mars* often lack a unified digital companion that handles the "boring" parts of gaming: keeping score, finding groups, and tracking long-term win rates. The goal was to build a platform that feels like an extension of the physical board game, not a replacement for it.</p>
+            <h2 class="section-title">SENSORY <span style="color: var(--proj-accent)">PLAY</span></h2>
+            <p>Kids Games is a suite of interactions designed for the youngest users. By focusing on immediate haptic and visual responses to touch, we create a digital environment that feels as reactive as physical toys.</p>
         </section>
 
         <section class="screenshot-gallery">
             <div class="placeholder-box">
-                [ REAL-TIME LOBBY DASHBOARD SCREENSHOT ]
+                [ PHYSICS-BASED MINI-GAME PREVIEW ]
             </div>
         </section>
 
         <section class="devblog-section">
-            <h2 class="section-title">DEV<span class="accent-orange">BLOG</span></h2>
-            <p>Building for **Architectural Velocity** meant automating everything. I established a pipeline where every commit to `main` triggers a multi-stage deployment:</p>
-            <ul class="about-list" style="color: #fff;">
-                <li>Backend (C#) deploys to Render via Docker containers.</li>
-                <li>Frontend (Angular) deploys to Vercel for edge delivery.</li>
-                <li>Database migrations are handled automatically through Supabase CLI.</li>
-            </ul>
-            <p>The real technical challenge was the real-time lobby system. By using SignalR hubs, I reduced state-sync latency to under 50ms, ensuring that when a player joins a lobby, everyone else sees them instantly.</p>
+            <h2 class="section-title">PHYSICS <span class="accent-orange">LOGIC</span></h2>
+            <p>Using Matter.js for 2D physics allows us to create puzzles that feel natural. Balloons pop, balls bounce, and blocks stack with a level of realism that encourages exploration and discovery.</p>
         </section>
 
         <nav class="project-nav">
             <a href="/portfolio/" class="btn btn-outline">← BACK TO GRID</a>
-            <a href="/portfolio/choose-who/" class="btn">NEXT PROJECT →</a>
+            <a href="/portfolio/route-66-passport/" class="btn">NEXT PROJECT →</a>
         </nav>
     </main>
 
+    <div class="overlay-backdrop"></div>
     <script src="/script.js"></script>
 </body>
 </html>

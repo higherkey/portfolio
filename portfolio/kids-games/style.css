@@ -1,0 +1,65 @@
+/* PROJECT PERSONALITY: Kids Games */
+:root {
+    --proj-accent: #33cc33; /* Green */
+    --proj-secondary: #ff33cc; /* Pink */
+    --proj-bg: #f0fff0; /* Soft Mint */
+}
+
+.project-hero {
+    background: var(--proj-bg);
+    color: var(--proj-accent);
+    padding: 6rem 4rem;
+    border-bottom: 6px solid var(--proj-accent);
+}
+
+.project-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 3rem 4rem;
+    border-bottom: 4px solid var(--proj-accent);
+    background: #fff;
+}
+
+.meta-item h4 { font-family: 'Arial Black', sans-serif; text-transform: uppercase; margin-bottom: 0.5rem; color: var(--proj-secondary); }
+.meta-item p { margin: 0; font-weight: bold; }
+
+.content-section {
+    padding: 4rem;
+    max-width: 1000px;
+}
+
+.screenshot-gallery {
+    padding: 4rem;
+    background: var(--proj-bg);
+    border-top: 4px solid var(--proj-accent);
+    border-bottom: 4px solid var(--proj-accent);
+    display: flex;
+    justify-content: center;
+}
+
+.placeholder-box {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: 4px dashed var(--proj-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial Black', sans-serif;
+    color: var(--proj-accent);
+    background: rgba(255,255,255,0.5);
+}
+
+.devblog-section {
+    background: var(--proj-accent);
+    color: #fff;
+    padding: 4rem;
+}
+
+.devblog-section h2 { color: #fff; border-bottom: 4px solid #fff; width: fit-content; }
+
+.project-nav {
+    padding: 4rem;
+    display: flex;
+    justify-content: space-between;
+}

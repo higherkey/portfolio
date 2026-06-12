@@ -1,45 +1,63 @@
-# 🚀 Creative Web Engineering Portfolio
+# Portfolio
 
-Welcome to my professional portfolio. This repository hosts the source code for my personal website, showcasing a curated collection of high-fidelity web applications, interactive games, and technical experiments.
+> Isaac's personal developer portfolio showcasing accomplishments, project case studies, and engineering capabilities.
 
-**[View Live Portfolio ✦](https://higherkey.github.io/portfolio/)**
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/richardlitt/standard-readme)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=flat-square)](https://higherkey.github.io/portfolio/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://html.spec.whatwg.org/)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
----
+This project is the primary digital portfolio for Isaac (higherkey), presenting a curated showcase of web applications, custom games, brand sites, and automation frameworks.
 
-## 🎨 Featured Projects
+## Table of Contents
 
-### 🛠️ Core Infrastructure & Platforms
-- **[Board Game Hub](https://github.com/higherkey/board-game-hub)**: A distributed multiplayer platform for shared-screen gaming.
-- **[ChooseWho](https://github.com/higherkey/choosewho)**: A sleek, mobile-first first-player selector.
-- **[ExpressZen](https://github.com/higherkey/ExpressZen)**: Regular Expression builder and tester with Blazor WASM.
+- [Background](#background)
+- [Install](#install)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-### 🎮 Interactive & Sensory Experiences
-- **[Kids Games Site](https://github.com/higherkey/kids-games-site)**: Sensory-focused mini-games (Bubble Wrap, Balloon Pop).
-- **[Project Reactor](https://github.com/higherkey/project-reactor)**: High-performance multiplayer reaction testing.
-- **[BrushQuest](https://github.com/higherkey/brushquest)**: Gamified toothbrushing assistant for kids.
+## Background
 
-### 🥖 Professional & Community Projects
-- **[Amy's Bakes](https://github.com/higherkey/amys-bakes)**: Artisan bakery digital storefront.
-- **[Route 66 Passport](https://github.com/higherkey/route-66-passport)**: Centennial travel companion app.
-- **[Tulsa Event Heat Map](https://github.com/higherkey/tulsa-event-heat-map)**: Geospatial visualization of local events.
+The portfolio site is constructed as a lightweight, zero-dependency visual experience focusing on fast load times, semantic accessibility, and clean CSS-based structural grids.
 
----
-
-## 🛠️ Technical Arsenal
-
-The projects featured in this portfolio demonstrate proficiency across a modern, full-stack engineering spectrum:
-
-- **Frontend Frameworks**: Angular (v21+), React, Svelte 5, Next.js, Blazor WASM.
-- **Languages & Logic**: TypeScript, JavaScript (ES6+), C# / .NET.
-- **Styling**: Modern CSS (Variables, Grid, Flexbox), Tailwind CSS, Framer Motion.
-- **Graphics & Physics**: Mapbox GL JS, Matter.js, Three.js, Canvas API.
-- **Backend & Cloud**: ASP.NET Core, Colyseus (WebSockets), Vercel, GitHub Pages.
+### Features
+- **Project Bento Grid**: Clean structural layout highlighting key projects.
+- **Responsive Navigation**: Adapts dynamically across phone, tablet, and desktop viewports.
+- **Clean Interactions**: Responsive CSS transition triggers and smooth script animations.
 
 ---
 
-## 📬 Connect
+## Install
 
-- **GitHub**: [@higherkey](https://github.com/higherkey)
-- **Website**: [higherkey.github.io](https://higherkey.github.io)
+This is a static HTML/CSS/JavaScript web application with zero external dependencies.
 
-Built with ⚡ and ☕ by higherkey.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/higherkey/portfolio.git
+   cd portfolio
+   ```
+2. **Setup local viewing:**
+   Simply open `index.html` in any modern web browser, or serve it using any simple static HTTP server.
+
+---
+
+## Usage
+
+For local development with hot-reloading:
+1. Open the folder in VS Code.
+2. Launch via the **Live Server** extension, or run `npx serve .` inside the directory.
+3. Access the browser view at the served local address.
+
+---
+
+## Contributing
+
+Please submit commits using conventional commit formatting. Avoid adding bloated third-party frameworks or libraries.
+
+---
+
+## License
+
+Built by [higherkey](https://github.com/higherkey). Standard copyright applies.
